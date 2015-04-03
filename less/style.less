@@ -43,7 +43,7 @@ body{
         max-width: 361px;
         height: auto;
         margin: 0 auto;
-        &-mob{
+        &_mob{
             display: none;
         }
     }
@@ -87,14 +87,27 @@ body{
     max-width: 655px;
     margin: 0 0 0 62/655*100%;
     &__item{
-//        display: inline-block;
         float: left;
         font-size: 24/16em;
         font-weight: bold;
         font-family: Times New Roman;
         color: #525252;
-        &:first-child{
+        &_active{
             color: #000;
+        }
+        &_checked{
+            span{
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: -32px;
+                    width: 20px;
+                    height: 16px;
+                    background: url("../images/check.png") no-repeat;
+                }
+            }
         }
         &:nth-child(2){
             padding: 0 86/(655-62/655)*100%;
@@ -192,6 +205,8 @@ body{
             display: inline-block;
             padding: 0 3px;
             background: #fff;
+            position: relative;
+            z-index: 2;
         }
         &:after{
             content: '';
@@ -201,7 +216,7 @@ body{
             left: 0;
             line-height: 18px;
             border-top: 2px dotted #525252;
-//            z-index: -1;
+            z-index: 1;
         }
     }
 }
@@ -224,7 +239,7 @@ body{
         }
     }
     &__input {
-        padding: 6px;
+        padding: 6px 12px;
         width: 100%;
         border: 1px solid #ccc;
         background: #fff;
@@ -241,6 +256,11 @@ body{
         letter-spacing: .5px;
         color: #000;
         font-family: Arial;
+    }
+    &__textarea{
+        resize: none;
+        min-height: 100px;
+        max-height: 100px;
     }
 }
 .input{
@@ -261,8 +281,12 @@ body{
         background-size: 18px;
 
         margin: 0;
-        padding: 0 0 0 28px;
-        font-size: 13px;
+        padding: 1px 0 1px 28px;
+        font-size: 14px;
+        a{
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+        }
     }
     &_checkbox + label:before {
         content: "";
@@ -364,6 +388,214 @@ body{
         padding: 0 2.2%;
     }
 }
+//------------------------2 page--------------------//
+.create{
+    margin-bottom: 40px;
+    .clearfix;
+    &__image{
+        float: left;
+        width: 300/658*100%;
+    }
+    &__expiration {
+        text-align: center;
+        font-size: 14/16em;
+        font-family: Arial;
+        font-weight: normal;
+        margin: 23px 0 0;
+    }
+    &__content {
+        width: 41%;
+        float: right;
+        margin-right: 3%;
+        .row{
+            margin-bottom: 35px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__title {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        font-family: "Times New Roman";
+        font-weight: bold;
+        line-height: 1.4em;
+        margin: -3px 0 33px;
+    }
+}
+.create-item{
+    padding-bottom: 35px;
+    position: relative;
+    margin: 0 0 29px;
+    border-bottom: 2px dotted #ccc;
+    &:last-child{
+        border: none;
+        margin: 0;
+    }
+}
+.info{
+        padding-bottom: 8px;
+    .clearfix;
+    &__i {
+        float: left;
+        width: 304/668*100%;
+        position: relative;
+        &:last-child {
+            margin: 0 0 0 7%;
+            padding: 0 0 0 0;
+            .info__lbl{
+                left: 17px;
+            }
+        }
+    }
+    &__lbl {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        text-transform: uppercase;
+    }
+    .row{
+        &__lbl {
+            font-size: 18/16em;
+            font-family: "Times New Roman";
+            font-weight: bold;
+        }
+    }
+}
+.details{
+    &__header {
+        text-transform: uppercase;
+        font-size: 18/16em;
+        font-family: "Times New Roman";
+        font-weight: bold;
+        text-align: center;
+        margin: -5px 0 26px;
+        letter-spacing: -0.05em;
+    }
+    &__items {
+        text-align: left;
+        margin: 0 0 0 11.5%;
+        font-size: 14/16em;
+        font-family: Arial;
+        font-weight: normal;
+        position: relative;
+        .clearfix;
+    }
+    &__row{
+        margin: 0 0 0 45px;
+        display: block;
+        float: left;
+        .clearfix;
+        &:last-child {
+            margin: 0 0 0 97px;
+            input {
+                left: 245px;
+            }
+        }
+        input {
+            vertical-align: middle;
+            width: 20px;
+            height: 18px;
+            position: absolute;
+            cursor: pointer;
+            font-size: 100%;
+            left: 15px;
+            z-index: 2;
+        }
+    }
+}
+.finish {
+    text-align: center;
+    font-size: 14px;
+    padding: 2.3rem 0 0;
+}
+
+.btn {
+    padding: 18px 34px;
+    font-size: 18/16em;
+    font-family: "Times New Roman";
+    font-weight: bold;
+}
+.date {
+    color: #e24c42;
+    font-weight: bold;
+}
+.rows {
+    float: right;
+    width: 68%;
+}
+.row{
+    .clearfix;
+    margin-bottom: 20px;
+    &__lbl {
+        font-size: 16/16em;
+        font-family: Arial;
+        font-weight: bold;
+    }
+    &_button {
+        margin: 2.4rem 0 0;
+    }
+}
+.select {
+    width: 59% !important;
+    float: right;
+    margin: -0.6rem 0 0;
+    font-size: 14/16em;
+    font-family: Arial;
+    font-weight: normal;
+//    margin: 0;
+    position: relative;
+    display: inline-block;
+    /* inline-block for ie7 */
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+    text-align: left;
+
+}
+.radio {
+    position: absolute;
+    opacity: 0;
+}
+.radio + label {
+    position: relative;
+}
+.radio + label:before,
+.radio + label:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.radio + label:before {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    background: #fff;
+}
+.radio + label:after {
+    width: 12px;
+    height: 12px;
+    background: #e24c42;
+    opacity: 0;
+    transition: all .2s;
+}
+.radio:checked + label:after {
+    opacity: 1;
+}
+.radio:focus + label:before {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.radio_time + label:before {
+    top: -1px;
+    left: -30px;
+}
+.radio_time + label:after {
+    top: 3px;
+    left: -26px;
+
+}
+//--------------------------------------------------//
 @media only screen and (max-width: 1023px){
     .header__link{
         right: 0;

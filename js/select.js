@@ -1,0 +1,3 @@
+$(function() {
+    $("#certificateAmount").select2();
+});
