@@ -8,7 +8,7 @@ input {
 }
 .container{
     max-width: 1108px;
-    padding: 0 82px;
+    padding: 0 78px;
     margin: 0 auto;
 }
 html, body {
@@ -30,17 +30,22 @@ a {
     text-decoration: none;
     color: #000;
 }
+body{
+    background: url("../images/bg.png") repeat;
+}
 .header{
     position: relative;
     &:extend(.container);
     text-align: center;
-    padding: 36px 0;
-    border-bottom: 4px solid #000;
+    background: #fff;
     &__logo{
         width: 361px;
         max-width: 361px;
         height: auto;
         margin: 0 auto;
+        &-mob{
+            display: none;
+        }
     }
     &__link{
         position: absolute;
@@ -48,29 +53,42 @@ a {
         font-size: 12/16em;
         color: #e71c25;
         font-family: Helvetica;
-        top: 75px;
+        top: 76px;
         right: 50/952*100%;
+        letter-spacing: 0.05em;
         &:before{
             content: '';
             display: inline-block;
-            border: 7px solid transparent;
-            border-right: 7px solid #000;
+            border: 6px solid transparent;
+            border-right: 6px solid #000;
             position: relative;
             top: 1px;
             margin: 0 12px 0 0;
         }
     }
+    &__i{
+        padding: 36px 0 34px;
+        border-bottom: 2px solid #000;
+        position: relative;
+    }
 }
 .page{
     background: #fff;
     &:extend(.container);
+    &__i{
+        max-width: 662px;
+        margin: 0 auto;
+    }
 }
 .nav{
     padding: 30px 0 50px;
     .clearfix;
     text-align: center;
+    max-width: 655px;
+    margin: 0 0 0 62/655*100%;
     &__item{
-        display: inline-block;
+//        display: inline-block;
+        float: left;
         font-size: 24/16em;
         font-weight: bold;
         font-family: Times New Roman;
@@ -79,46 +97,51 @@ a {
             color: #000;
         }
         &:nth-child(2){
-            padding: 0 80/952*100%;
+            padding: 0 86/(655-62/655)*100%;
             position: relative;
             &:before,
             &:after{
-                content: '>';
+                content: '';
                 position: absolute;
-                top: 5px;
+                top: 8px;
+                width: 10px;
                 height: 18px;
                 line-height: 18px;
                 font-size: 24/16em;
                 font-weight: bold;
                 font-family: Times New Roman;
                 color: #525252;
+                background: url("../images/arrow.png") no-repeat;
             }
             &:before{
-                left: 80/952*100%;
+                left: 18.4%;
             }
             &:after{
-                right: 80/952*100%;
+                right: 10.4%;
             }
         }
     }
 }
 .content{
-    width: 655px;
+    max-width: 658px;
     margin: 0 auto;
-    padding: 36px 0 50px;
+    padding: 31px 0 48px;
     .clearfix;
 }
 .login{
-    width: 284/655*100%;
+    width: 280/655*100%;
     float: left;
     &__title{
         font-size: 18/16em;
         font-weight: bold;
         font-family: Times New Roman;
         color: #000;
-        margin: 0 0 40px;
+        margin: 2px 0 40px;
         display: block;
         text-transform: uppercase;
+        &_mob{
+            display: none;
+        }
     }
     &__social{
         text-align: center;
@@ -127,36 +150,41 @@ a {
         width: 30px;
         height: 30px;
         display: inline-block;
-        margin: 0 10/284*100%;
+        margin: 0 10px;
+        &:first-child{
+            margin: 0;
+        }
     }
     &__link{
         display: inline-block;
         width: 30px;
         height: 30px;
-    }
-    .fb{
-        background: url("../images/fb.png") no-repeat;
-        background-size: 13px 27px;
-    }
-    .twitter{
-        background: url("../images/tw.png") no-repeat;
-    }
-    .vk{
-        background: url("../images/vk.png") no-repeat;
-    }
-    .insta{
-        background: url("../images/insta.png") no-repeat;
-    }
-    .google{
-        background: url("../images/g.png") no-repeat;
+        &_fb{
+            background: url("../images/fb.png") no-repeat;
+            background-size: 13px 27px;
+        }
+        &_twitter{
+            background: url("../images/tw.png") no-repeat;
+        }
+        &_vk{
+            background: url("../images/vk.png") no-repeat;
+            height: 25px;
+
+        }
+        &_insta{
+            background: url("../images/insta.png") no-repeat;
+        }
+        &_google{
+            background: url("../images/g.png") no-repeat;
+        }
     }
     &__divider{
-        margin: 30px 0 0 0;
+        margin: 18px 0 0 0;
         display: block;
         text-align: center;
         position: relative;
         width: 100%;
-        font-size: 18/16em;
+        font-size: 0.95em;
         font-weight: bold;
         font-family: Times New Roman;
         color: #000;
@@ -176,67 +204,75 @@ a {
 //            z-index: -1;
         }
     }
-    .login-form{
-        text-align: center;
-        padding-top: 30px;
-        button{
-            font-size: 1em;
-            font-family: "Times New Roman";
-            font-weight: bold;
-        }
+}
+.login-form{
+    text-align: center;
+    padding-top: 27px;
+    button{
+        font-size: 1em;
+        font-family: "Times New Roman";
+        font-weight: bold;
     }
-    .form__row{
+}
+.form{
+    &__row{
         margin-bottom: 20px;
         &_remember{
             text-align: left;
-            margin: 0 0 20px 0;
+            margin: 24px 0 20px 0;
+            position: relative;
         }
     }
-    .form__input {
-        padding: 14px;
+    &__input {
+        padding: 6px;
         width: 100%;
         border: 1px solid #ccc;
         background: #fff;
         border-radius: 0;
         font-size: 14/16em;
-        font-weight: bold;
+        font-weight: normal;
         font-family: Arial;
         color: #b0b0b0;
         box-shadow: none;
     }
-    .form__label{
+    &__label{
         font-size: 14/16em;
         font-weight: normal;
-//        letter-spacing: .5px;
+        letter-spacing: .5px;
         color: #000;
         font-family: Arial;
     }
-    .input_checkbox {
+}
+.input{
+    &_checkbox {
         position: absolute !important;
         opacity: 0 !important;
         top: auto !important;
         margin-right: 0 !important;
         font-size: 100% !important;
         cursor: pointer;
+        width: 18px;
+        height: 18px;
     }
-    .input_checkbox + label {
+    &_checkbox + label {
         background-image: url("../images/icon_checkbox.png");
         background-position: left center;
         background-repeat: no-repeat;
-        background-size: 15px;
+        background-size: 18px;
+
         margin: 0;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 28px;
         font-size: 13px;
     }
-    .input_checkbox + label:before {
+    &_checkbox + label:before {
         content: "";
         display: none;
         background: url("../images/icon_checkbox_checked.png");
     }
-    .input_checkbox:checked + label {
+    &_checkbox:checked + label {
         background-image: url("../images/icon_checkbox_checked.png");
     }
-    .input_checkbox:checked + label:before {
+    &_checkbox:checked + label:before {
         content: "";
         display: none;
         background: url("../images/icon_checkbox.png");
@@ -244,7 +280,7 @@ a {
 }
 .btn-invert{
     margin: 0 0 20px 0;
-    padding: 12px 0;
+    padding: 11px 0;
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;
@@ -258,9 +294,10 @@ a {
     cursor: pointer;
     background: #000;
     border: 1px solid #000;
-    font-size: 1em;
+    font-size: 0.95em;
     font-family: "Times New Roman";
     font-weight: bold;
+    letter-spacing: 0.1em;
 }
 .btn-invert_full-width{
     width: 100%;
@@ -272,8 +309,9 @@ a {
 .advantage{
     float: right;
     width: 280/655*100%;
+    margin-right: 1.2%;
     &__header {
-        margin: 0 0 42px;
+        margin: 0 0 37px;
         padding: 0;
         font-size: 18/16em;
         font-weight: bold;
@@ -282,11 +320,11 @@ a {
     }
     &__list {
         display: inline-block;
-        margin: 0 0 40px 0;
+        margin: 0 0 22px 0;
     }
     &__item {
         margin: 0 0 0.9rem;
-        padding: 0 0 0 .4rem;
+        padding: 0 0 0 .5rem;
         position: relative;
         font-size: 14/16em;
         font-weight: normal;
@@ -301,11 +339,17 @@ a {
         }
     }
 }
+.back-link{
+    display: none;
+}
 .footer{
     &:extend(.container);
     text-align: center;
-    padding: 30px 0;
-    border-top: 4px solid #000;
+    background: #fff;
+    &__i{
+        padding: 29px 0;
+        border-top: 2px solid #000;
+    }
     &__list{
         display: inline-block;
         width: 100%;
@@ -317,6 +361,16 @@ a {
         font-size: 12/16em;
         font-family: Arial;
         font-weight: bold;
-        padding: 0 25/952*100%;
+        padding: 0 2.2%;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .header__link{
+        right: 0;
+    }
+}
+@media only screen and (max-width: 860px){
+    .header__link{
+        right: -7%;
     }
 }
