@@ -1,3 +1,5 @@
 $(function() {
-    $("#certificateAmount").select2();
+    $("#certificateAmount").select2({
+        minimumResultsForSearch: Infinity
+    });
 });
