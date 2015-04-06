@@ -78,14 +78,13 @@ body{
     &__i{
         max-width: 662px;
         margin: 0 auto;
+//        text-align: center;
     }
 }
 .nav{
-    padding: 30px 0 50px;
+    padding: 30px 0 50px 3%;
     .clearfix;
-    text-align: center;
-    max-width: 655px;
-    margin: 0 0 0 62/655*100%;
+    display: inline-block;
     &__item{
         float: left;
         font-size: 24/16em;
@@ -96,6 +95,7 @@ body{
             color: #000;
         }
         &_checked{
+            margin: 0 0 0 30px;
             span{
                 position: relative;
                 &:before{
@@ -109,37 +109,32 @@ body{
                 }
             }
         }
-        &:nth-child(2){
-            padding: 0 86/(655-62/655)*100%;
-            position: relative;
-            &:before,
-            &:after{
-                content: '';
-                position: absolute;
-                top: 8px;
-                width: 10px;
+    }
+    &__item-arrow{
+            width: 9px;
+            height: 18px;
+            line-height: 1.5em;
+            margin: 0 26px 0 44px;
+            span{
+                width: 9px;
                 height: 18px;
+                display: inline-block;
                 line-height: 18px;
-                font-size: 24/16em;
-                font-weight: bold;
-                font-family: Times New Roman;
-                color: #525252;
                 background: url("../images/arrow.png") no-repeat;
             }
-            &:before{
-                left: 18.4%;
-            }
-            &:after{
-                right: 10.4%;
-            }
-        }
     }
+}
+.nav-wr{
+    text-align: center;
 }
 .content{
     max-width: 658px;
     margin: 0 auto;
-    padding: 31px 0 48px;
+    padding: 27px 0 48px;
     .clearfix;
+    &__title_mob{
+        display: none;
+    }
 }
 .login{
     width: 280/655*100%;
@@ -302,6 +297,9 @@ body{
         background: url("../images/icon_checkbox.png");
     }
 }
+.checkbox_finish{
+    left: 17.5%;
+}
 .btn-invert{
     margin: 0 0 20px 0;
     padding: 11px 0;
@@ -402,13 +400,16 @@ body{
         font-family: Arial;
         font-weight: normal;
         margin: 23px 0 0;
+        &_mob{
+            display: none;
+        }
     }
     &__content {
         width: 41%;
         float: right;
         margin-right: 3%;
         .row{
-            margin-bottom: 35px;
+            margin-bottom: 31px;
             &:last-child{
                 margin-bottom: 0;
             }
@@ -421,7 +422,7 @@ body{
         font-family: "Times New Roman";
         font-weight: bold;
         line-height: 1.4em;
-        margin: -3px 0 33px;
+        margin: -3px 0 29px;
     }
 }
 .create-item{
@@ -464,6 +465,8 @@ body{
     }
 }
 .details{
+    padding-bottom: 30px;
+    margin: 0 0 46px;
     &__header {
         text-transform: uppercase;
         font-size: 18/16em;
@@ -508,11 +511,16 @@ body{
 .finish {
     text-align: center;
     font-size: 14px;
-    padding: 2.3rem 0 0;
+    padding: 0;
+    .input_checkbox + label{
+        font-family: Arial;
+        letter-spacing: -0.5px;
+    }
+
 }
 
 .btn {
-    padding: 18px 34px;
+    padding: 15px 37px;
     font-size: 18/16em;
     font-family: "Times New Roman";
     font-weight: bold;
@@ -532,13 +540,19 @@ body{
         font-size: 16/16em;
         font-family: Arial;
         font-weight: bold;
+        margin-right: 6.5%;
     }
     &_button {
-        margin: 2.4rem 0 0;
+        margin: 77px 0 0;
     }
 }
+.select-wr{
+    width: 63% !important;
+    display: inline-block;
+//    float: right;
+}
 .select {
-    width: 59% !important;
+//    width: 59% !important;
     float: right;
     margin: -0.6rem 0 0;
     font-size: 14/16em;
@@ -594,6 +608,36 @@ body{
     top: 3px;
     left: -26px;
 
+}
+.calendar {
+    margin: 23px 0 0 0;
+    display: none;
+    padding: 30px 30px 24px;
+    border: 1px solid #000;
+    position: relative;
+    &:before,
+    &:after{
+        bottom: 100%;
+        left: 50%;
+
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:before {
+        border-bottom-color: #000;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    &:after {
+        border-bottom-color: #fff;
+        border-width: 9px;
+        margin-left: -9px;
+    }
 }
 //--------------------------------------------------//
 @media only screen and (max-width: 1023px){

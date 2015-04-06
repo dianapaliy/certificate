@@ -1,0 +1,829 @@
+ .ui-datepicker {
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 12px;
+     font-family: Arial, sans-serif;
+     font-weight: bold;
+}
+ .ui-datepicker-header,
+ .ui-datepicker-calendar {
+    width: 35%;
+}
+ .ui-datepicker-year{
+     display: none;
+ }
+ .ui-datepicker-header {
+    background: none;
+    border: none;
+    padding: 0;
+     position: relative;
+}
+ .ui-datepicker-calendar {
+    float: left;
+}
+ .ui-datepicker-calendar .ui-state-default {
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #000;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+     display: inline-block;
+}
+ .ui-datepicker-calendar .ui-state-disabled .ui-state-default {
+    color: #999;
+}
+ .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {
+    color: #e24c42;
+}
+ .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default {
+    background: #e2d0d9;
+    border-radius: 12px;
+    color: #762d51;
+}
+ .ui-datepicker-title {
+    color: #000;
+    border-bottom: 1px solid #dacce2;
+    padding: 0 0 23px;
+    margin: 0;
+     font-size: 16px;
+}
+ .ui-datepicker .ui-datepicker-title{
+     margin: 0;
+     line-height: 16px;
+ }
+ .ui-timepicker-div {
+    width: 43.5%;
+    float: right;
+    margin: -3.1rem 0 0;
+    color: #000;
+     font-size: 16px;
+}
+ dl{
+     margin: 8px 0 0 0;
+ }
+ .ui_tpicker_time {
+    display: inline-block;
+    font-weight: bold;
+    /*font-size: 1em;*/
+    margin: 0 3% 0 0;
+    width: 60%;
+    float: right;
+    position: relative;
+    left: -13px;
+     color: #e24c42;;
+}
+ .ui_tpicker_time_label {
+    display: inline-block;
+}
+ .ui_tpicker_hour_label {
+    margin: 58px 0 0;
+}
+ .ui_tpicker_minute_label {
+     margin: 32px 0 0;
+ }
+ .ui_tpicker_hour {
+    margin: -12px 0 0 0;
+    width: 66%;
+    float: right;
+    position: relative;
+}
+ .ui_tpicker_minute {
+     margin: -12px 0 0 0;
+     width: 66%;
+     float: right;
+     position: relative;
+ }
+ .ui_tpicker_hour .ui-slider,
+ .ui_tpicker_minute .ui-slider,
+ .ui_tpicker_hour .ui_tpicker_helper,
+ .ui_tpicker_minute .ui_tpicker_helper {
+    height: 1px;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #acadae;
+    border-bottom: 1px solid #acadae;
+}
+ .ui_tpicker_hour .ui-slider-handle,
+ .ui_tpicker_minute .ui-slider-handle,
+ .ui_tpicker_hour .ui_tpicker_helper-handle,
+ .ui_tpicker_minute .ui_tpicker_helper-handle {
+    background: none;
+    height: 20px;
+    top: -10px;
+    width: 20px;
+    border-radius: 10px;
+    margin-left: -10px;
+    border: 2px solid #000;
+    background-color: #acadae;
+     cursor: pointer;
+    /*background-image: linear-gradient(top, #fefefe, #e5e5e5);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#e5e5e5', GradientType=0);*/
+}
+ .ui_tpicker_hour .ui-slider-handle.ui-state-hover,
+ .ui_tpicker_minute .ui-slider-handle.ui-state-hover,
+ .ui_tpicker_hour .ui_tpicker_helper-handle.ui-state-hover,
+ .ui_tpicker_minute .ui_tpicker_helper-handle.ui-state-hover,
+ .ui_tpicker_hour .ui-slider-handle.ui-state-focus,
+ .ui_tpicker_minute .ui-slider-handle.ui-state-focus,
+ .ui_tpicker_hour .ui_tpicker_helper-handle.ui-state-focus,
+ .ui_tpicker_minute .ui_tpicker_helper-handle.ui-state-focus {
+    border-color: #000 !important;
+}
+ .ui-slider {
+    float: right;
+}
+ .ui-datepicker-next,
+ .ui-datepicker-prev {
+    width: 10px;
+    height: 15px;
+    top: 4px;
+}
+ .ui-datepicker-next:hover,
+ .ui-datepicker-prev:hover,
+ .ui-datepicker-next.ui-state-disabled,
+ .ui-datepicker-prev.ui-state-disabled,
+ .ui-datepicker-next.ui-state-hover,
+ .ui-datepicker-prev.ui-state-hover {
+    background: none;
+    cursor: pointer;
+    border: none;
+    top: 4px;
+}
+ .ui-icon {
+     display: block;
+     text-indent: -99999px;
+     overflow: hidden;
+     background-repeat: no-repeat;
+ }
+ .ui-datepicker .ui-datepicker-prev,
+ .ui-datepicker .ui-datepicker-next {
+     position: absolute;
+     top: 2px;
+     width: 1.8em;
+     height: 1.8em;
+ }
+ .ui-datepicker-prev .ui-icon {
+    position: static;
+    margin: 0;
+    background: url('../images/arrow_calendar.png') no-repeat;
+    width: 10px;
+    height: 15px;
+}
+ .ui-datepicker-next .ui-icon {
+     position: static;
+     margin: 0;
+     background: url('../images/arrow_calendar_next.png') no-repeat;
+     width: 10px;
+     height: 15px;
+ }
+ .ui-datepicker-next {
+    right: 0;
+}
+ .ui-datepicker-next:hover,
+ .ui-datepicker-next.ui-state-disabled,
+ .ui-datepicker-next.ui-state-hover {
+    right: 0;
+}
+ .ui-datepicker-next.ui-state-disabled .ui-icon {
+    background-position: 0 -15px;
+}
+ .ui-datepicker-next .ui-icon {
+    background-position: 0 0;
+}
+ .ui-datepicker-prev {
+    left: 0;
+}
+ .ui-datepicker-prev:hover,
+ .ui-datepicker-prev.ui-state-disabled,
+ .ui-datepicker-prev.ui-state-hover {
+    left: 0;
+}
+ .ui-datepicker-prev.ui-state-disabled .ui-icon {
+    background-position: 0;
+}
+ .ui-datepicker-prev .ui-icon {
+    background-position: 0;
+}
+ .ui_tpicker_helper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+/*.certificate-create-item {*/
+    /*font-size: 11px;*/
+    /*font: 1.1rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*padding-bottom: 1.5rem;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*margin: 0 0 3rem;*/
+/*}*/
+/*.certificate-create-item:after {*/
+    /*content: '';*/
+    /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/border.png') repeat-x;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*height: 2px;*/
+/*}*/
+/*.certificate-create-item:last-child:after {*/
+    /*display: none;*/
+/*}*/
+/*.certificate-create-finish {*/
+    /*text-align: center;*/
+    /*font-size: 14px;*/
+    /*padding: 2.3rem 0 0;*/
+/*}*/
+/*.certificate-create-finish .certificate-row:first-child {*/
+    /*font-weight: bold;*/
+/*}*/
+/*.certificate-create-finish .certificate-row_button {*/
+    /*margin: 2.4rem 0 0;*/
+/*}*/
+/*.certificate-create-finish a {*/
+    /*border-bottom: 1px solid #dacce2;*/
+/*}*/
+/*.certificate-create-finish .btn {*/
+    /*padding: 1.5rem 5rem;*/
+    /*width: auto;*/
+    /*font-size: 19px;*/
+    /*font: 1.9rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*background-size: 100% 100%;*/
+/*}*/
+/*.certificate-create-finish div.error {*/
+    /*text-align: center;*/
+/*}*/
+/*.certificate-create-finish:after {*/
+    /*display: none;*/
+/*}*/
+/*.certificate-create-finish .input_checkbox + label {*/
+    /*background-position: 0 0;*/
+/*}*/
+/*.certificate-create__image {*/
+    /*float: left;*/
+    /*padding: 2.7rem 0 0;*/
+    /*width: 45.8%;*/
+/*}*/
+/*.certificate-create__image img {*/
+    /*border-radius: 10px;*/
+/*}*/
+/*.certificate-create__content {*/
+    /*margin-left: 11%;*/
+    /*width: 39%;*/
+    /*padding: 2rem 0 0;*/
+    /*float: left;*/
+/*}*/
+/*.certificate-create__content .certificate-row:last-child {*/
+    /*margin: 2.6rem 0 2.1rem;*/
+/*}*/
+/*.certificate-create__expiration {*/
+    /*text-align: center;*/
+    /*font-size: 14px;*/
+    /*font: 1.4rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*margin: 2.5rem 0 1.8rem;*/
+/*}*/
+/*.certificate-create__expiration span {*/
+    /*color: #ce44c5;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.certificate-create__title {*/
+    /*color: #47166c;*/
+    /*text-transform: uppercase;*/
+    /*font-size: 17px;*/
+    /*font: 1.7rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*font-weight: bold;*/
+    /*line-height: 3.2rem;*/
+    /*margin: 0 0 2.6rem;*/
+/*}*/
+/*.certificate-create__lbl {*/
+    /*float: left;*/
+/*}*/
+/*.certificate-create .certification-row {*/
+    /*margin: 0 0 2.6rem;*/
+/*}*/
+/*.certificate-info {*/
+    /*padding-bottom: 1.2rem;*/
+    /*margin: 0 0 2.45rem;*/
+/*}*/
+/*.certificate-info__i {*/
+    /*overflow: hidden;*/
+    /*float: left;*/
+    /*width: 46%;*/
+/*}*/
+/*.certificate-info__i:last-child {*/
+    /*margin: 0 0 0 7%;*/
+    /*padding: 0 3% 0 0;*/
+/*}*/
+/*.certificate-info__i:last-child .certificate-rows {*/
+    /*width: 73%;*/
+/*}*/
+/*.certificate-info__lbl {*/
+    /*float: left;*/
+    /*color: #47166c;*/
+    /*text-transform: uppercase;*/
+    /*margin: .7rem 0 0;*/
+/*}*/
+/*.certificate-info .certificate-rows {*/
+    /*float: right;*/
+    /*width: 68%;*/
+/*}*/
+/*.certificate-info .certificate-rows .form__input {*/
+    /*padding: .6rem 1rem;*/
+/*}*/
+/*.certificate-info .certificate-rows .certificate-row {*/
+    /*margin: 0 0 2rem;*/
+/*}*/
+/*.certificate-row__lbl {*/
+    /*font-size: 16px;*/
+    /*font: 1.6rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.certificate-row .form__input {*/
+    /*border: 1px solid #dacce2;*/
+/*}*/
+/*.certificate-row .form__textarea {*/
+    /*resize: none;*/
+    /*min-height: 9.5rem;*/
+    /*max-height: 9.5rem;*/
+/*}*/
+/*.certificate-select {*/
+    /*width: 59% !important;*/
+    /*float: right;*/
+    /*margin: -0.6rem 0 0;*/
+    /*font-size: 11px;*/
+    /*font: 1.1rem 'proxima_nova', 'rubl', sans-serif;*/
+/*}*/
+/*.certificate-details {*/
+    /*padding-bottom: 0;*/
+/*}*/
+/*.certificate-details__header {*/
+    /*font-weight: bold !important;*/
+    /*text-transform: uppercase;*/
+    /*color: #47166c;*/
+    /*text-align: center;*/
+    /*margin: 0 0 3.3rem;*/
+    /*font-size: 16px;*/
+    /*font: 1.6rem 'proxima_nova', 'rubl', sans-serif;*/
+/*}*/
+/*.certificate-details__items {*/
+    /*text-align: left;*/
+    /*margin: 0 0 3.7rem 11.5%;*/
+    /*font-size: 15px;*/
+    /*font: 1.5rem 'proxima_nova', 'rubl', sans-serif;*/
+/*}*/
+/*.certificate-details__items input,*/
+/*.certificate-details__items label {*/
+    /*vertical-align: middle;*/
+/*}*/
+/*.certificate-details__items input {*/
+    /*margin: 0 10px 0 0;*/
+/*}*/
+/*.certificate-details .certificate-row {*/
+    /*display: block;*/
+    /*float: left;*/
+/*}*/
+/*.certificate-details .certificate-row:first-child {*/
+    /*margin: 0 0 0 30px;*/
+/*}*/
+/*.certificate-details .certificate-row:last-child {*/
+    /*width: 56.5%;*/
+    /*float: right;*/
+/*}*/
+/*.certificate-details .certificate-row input {*/
+    /*margin: 0 12px 0 -29px;*/
+/*}*/
+/*.certificate-success {*/
+    /*text-align: center;*/
+    /*min-height: 340px;*/
+    /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/certificate_banner_background.jpg') no-repeat center center;*/
+    /*background-size: contain;*/
+    /*margin: 6rem 0 0;*/
+    /*padding: 11rem 0 0;*/
+/*}*/
+/*.certificate-success__title {*/
+    /*color: #49196f;*/
+    /*font-size: 2.4rem;*/
+/*}*/
+/*.certificate-success__msg {*/
+    /*color: #4b1a6f;*/
+    /*margin: 3.3rem auto 0;*/
+    /*font-size: 1.7rem;*/
+    /*line-height: 2.6rem;*/
+    /*width: 83%;*/
+/*}*/
+/*.certificate-success__msg a {*/
+    /*font-weight: bold;*/
+    /*border-bottom: 1px solid #d1cbd8;*/
+/*}*/
+/*.calendar {*/
+    /*margin: 0;*/
+/*}*/
+.calendar .ui-slider {
+    width: 100%;
+}
+/*.certificate-go-back {*/
+    /*text-align: center;*/
+    /*margin: 0 0 1.5rem;*/
+/*}*/
+/*.certificate-go-back__link {*/
+    /*text-transform: uppercase;*/
+    /*font-size: 1.5rem;*/
+    /*font-weight: bold;*/
+    /*display: inline-block;*/
+    /*padding: 2rem;*/
+/*}*/
+/*.certificate-go-back__link:before {*/
+    /*content: '';*/
+    /*display: inline-block;*/
+    /*border: 4px solid transparent;*/
+    /*border-right: 4px solid #000;*/
+    /*position: relative;*/
+    /*top: 1px;*/
+    /*margin: 0 .5rem 0 0;*/
+/*}*/
+/*.body-certificate-create  {*/
+    /*padding: 0 0 3.5rem;*/
+/*}*/
+/*.body-certificate-success  {*/
+    /*padding: 0 0 11.5rem;*/
+/*}*/
+/*@media only screen and (max-width: 767px) {*/
+    /*.certificate-main {*/
+        /*width: 88%;*/
+        /*max-width: 88%;*/
+    /*}*/
+    /*.certificate-main .btn-invert,*/
+    /*.certificate-main .cart__coupon .coupon__btn {*/
+        /*padding: 1.6rem 0;*/
+        /*margin-bottom: 1.7rem;*/
+        /*font-size: 2rem;*/
+    /*}*/
+    /*.certificate-main .form__input {*/
+        /*padding: 2rem;*/
+    /*}*/
+    /*.certificate-main .form__row {*/
+        /*margin-bottom: 2rem;*/
+    /*}*/
+    /*.certificate-main .form__row_remember {*/
+        /*margin-bottom: 2rem;*/
+    /*}*/
+    /*.certificate-main .form__label,*/
+    /*.certificate-main .form__link {*/
+        /*font-size: 16px;*/
+        /*font: 1.6rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*}*/
+    /*.certificate-main .form__link {*/
+        /*border-bottom-color: #b2a6be;*/
+    /*}*/
+    /*.certificate-main .mobile-elem {*/
+        /*display: block;*/
+    /*}*/
+    /*.certificate-header {*/
+        /*border: none;*/
+        /*padding: 5rem 0 2.5rem;*/
+    /*}*/
+    /*.certificate-header img {*/
+        /*max-width: 65% !important;*/
+        /*width: auto !important;*/
+        /*height: auto !important;*/
+    /*}*/
+    /*.certificate-login,*/
+    /*.certificate-advantage {*/
+        /*float: none;*/
+        /*width: 100%;*/
+    /*}*/
+    /*.certificate-login .form__divider-title {*/
+        /*font-size: 2.4rem;*/
+        /*margin: 2.6rem 0 3rem;*/
+    /*}*/
+    /*.certificate-login .social-for-register {*/
+        /*margin: 0 .9rem;*/
+    /*}*/
+    /*.certificate-login .account-login__divider {*/
+        /*margin: 2.7rem 0 2rem;*/
+        /*font-size: 18px;*/
+        /*font: 1.8rem 'proxima_nova', 'rubl', sans-serif;*/
+    /*}*/
+    /*.certificate-login .account-login__divider:after {*/
+        /*margin: -1px 0 0;*/
+    /*}*/
+    /*.certificate-advantage {*/
+        /*border-top: 1px solid #dad0e2;*/
+        /*border-bottom: 1px solid #dad0e2;*/
+        /*padding: 0 0 2.5rem;*/
+        /*margin: 3.5rem 0 0;*/
+    /*}*/
+    /*.certificate-advantage__header {*/
+        /*font-size: 2.4rem;*/
+        /*margin: 4.4rem 0 3rem;*/
+    /*}*/
+    /*.certificate-footer {*/
+        /*border: none;*/
+        /*padding: 3rem 0 5rem;*/
+    /*}*/
+    /*.certificate-footer__i {*/
+        /*font-size: 1.5rem;*/
+    /*}*/
+    /*.certificate-calendar {*/
+        /*margin: 0;*/
+    /*}*/
+     /*{*/
+        /*padding: 0 !important;*/
+    /*}*/
+     /*.ui-datepicker {*/
+        /*margin: 5.2rem 0 0;*/
+        /*font-size: 2rem;*/
+    /*}*/
+     /*.ui-datepicker td {*/
+        /*text-align: center;*/
+        /*font-size: 2rem;*/
+        /*padding: 1rem;*/
+    /*}*/
+     /*.ui-datepicker th {*/
+        /*padding: 1.2rem 0 .5rem;*/
+    /*}*/
+     /*.ui-datepicker-header {*/
+        /*width: 100%;*/
+    /*}*/
+     /*.ui-datepicker-calendar,*/
+     /*.ui-timepicker-div {*/
+        /*width: 100%;*/
+        /*float: none;*/
+        /*margin: 0;*/
+    /*}*/
+     /*.ui-datepicker-title {*/
+        /*padding: 0 0 1.7rem;*/
+        /*margin: 0 0 .6rem;*/
+    /*}*/
+     /*.ui-datepicker {*/
+        /*width: 100%;*/
+    /*}*/
+     /*.ui-datepicker .ui-datepicker-prev,*/
+     /*.ui-datepicker .ui-datepicker-next {*/
+        /*top: -1px;*/
+    /*}*/
+     /*.ui-datepicker-next {*/
+        /*right: 0;*/
+    /*}*/
+     /*.ui-datepicker-next:hover,*/
+     /*.ui-datepicker-next.ui-state-disabled,*/
+     /*.ui-datepicker-next.ui-state-hover {*/
+        /*right: 0;*/
+    /*}*/
+     /*.ui-datepicker-prev {*/
+        /*left: 0;*/
+    /*}*/
+     /*.ui-datepicker-prev:hover,*/
+     /*.ui-datepicker-prev.ui-state-disabled,*/
+     /*.ui-datepicker-prev.ui-state-hover {*/
+        /*left: 0;*/
+    /*}*/
+     /*.ui-datepicker-calendar .ui-state-default {*/
+        /*display: inline-block;*/
+    /*}*/
+     /*.ui-timepicker-div {*/
+        /*margin: 4.6rem 0 -0.8rem;*/
+    /*}*/
+     /*.ui_tpicker_time_label,*/
+     /*.ui_tpicker_hour_label,*/
+     /*.ui_tpicker_minute_label {*/
+        /*font-size: 2.2rem;*/
+    /*}*/
+     /*.ui_tpicker_time {*/
+        /*margin: 0 0 0 6rem;*/
+        /*font-size: 2.4rem;*/
+    /*}*/
+     /*.ui_tpicker_hour_label,*/
+     /*.ui_tpicker_minute_label {*/
+        /*margin: 5.1rem 0 0;*/
+    /*}*/
+     /*.ui_tpicker_hour,*/
+     /*.ui_tpicker_minute {*/
+        /*margin: -2rem 0 0;*/
+        /*width: 64%;*/
+    /*}*/
+    /*.certificate-info__i {*/
+        /*float: none;*/
+        /*width: 100%;*/
+    /*}*/
+    /*.certificate-info__i:last-child {*/
+        /*margin: 1rem 0 0;*/
+        /*padding: 0;*/
+    /*}*/
+    /*.certificate-info__i:last-child .certificate-rows {*/
+        /*width: 100%;*/
+    /*}*/
+    /*.certificate-info__lbl {*/
+        /*float: none;*/
+        /*font-size: 2.2rem;*/
+        /*margin: 0 0 2.3rem;*/
+        /*display: inline-block;*/
+    /*}*/
+    /*.certificate-info .certificate-rows {*/
+        /*width: 100%;*/
+        /*float: none;*/
+    /*}*/
+    /*.certificate-info .certificate-rows .certificate-row {*/
+        /*margin: 0 0 2.3rem;*/
+    /*}*/
+    /*.certificate-info .certificate-rows .form__input {*/
+        /*padding: 1.4rem 2rem;*/
+    /*}*/
+    /*.certificate-mobile__title {*/
+        /*text-transform: uppercase;*/
+        /*color: #000;*/
+        /*display: block;*/
+        /*font-size: 2.4rem;*/
+        /*font-weight: bold;*/
+        /*margin: 2rem 0 .5rem;*/
+    /*}*/
+    /*.certificate-create {*/
+        /*padding-bottom: 14.5rem;*/
+        /*position: relative;*/
+    /*}*/
+    /*.certificate-create-item {*/
+        /*border-bottom: 1px solid #dad0e2;*/
+        /*margin-bottom: 3.9rem;*/
+    /*}*/
+    /*.certificate-create-item:after {*/
+        /*display: none;*/
+    /*}*/
+    /*.certificate-create-finish {*/
+        /*font-size: 1.7rem;*/
+        /*text-align: left;*/
+        /*padding-bottom: 4.5rem;*/
+        /*margin-bottom: 0;*/
+    /*}*/
+    /*.certificate-create-finish label {*/
+        /*display: inline-block;*/
+        /*line-height: 2.4rem;*/
+        /*padding: 0 0 0 4.7rem;*/
+        /*background-position: 3px -1px;*/
+    /*}*/
+    /*.certificate-create-finish .certificate-row_button {*/
+        /*margin-top: 4.1rem;*/
+    /*}*/
+    /*.certificate-create-finish .btn {*/
+        /*width: 100%;*/
+        /*font-size: 2.7rem;*/
+        /*padding: 2.2rem 0;*/
+    /*}*/
+    /*.certificate-create-finish div.error {*/
+        /*text-align: left;*/
+        /*padding: 0 0 0 4.7rem;*/
+    /*}*/
+    /*.certificate-create__image {*/
+        /*width: 27%;*/
+        /*margin-bottom: 2.5rem;*/
+    /*}*/
+    /*.certificate-create__image img {*/
+        /*border-radius: 0;*/
+    /*}*/
+    /*.certificate-create__content {*/
+        /*margin-left: 6%;*/
+        /*width: 67%;*/
+    /*}*/
+    /*.certificate-create__content .certificate-row:last-child {*/
+        /*margin: 0;*/
+        /*position: absolute;*/
+        /*bottom: 3.5rem;*/
+        /*left: 0;*/
+        /*right: 0;*/
+    /*}*/
+    /*.certificate-create__content .certificate-row:last-child div.error {*/
+        /*margin-bottom: -1.6rem;*/
+    /*}*/
+    /*.certificate-create__title {*/
+        /*line-height: 2.7rem;*/
+        /*margin: .4rem 0 2rem;*/
+    /*}*/
+    /*.certificate-create__expiration {*/
+        /*text-align: left;*/
+        /*font-size: 1.6rem;*/
+        /*margin: 2.2rem 0 2.5rem;*/
+    /*}*/
+    /*.certificate-create .certificate-row_textarea {*/
+        /*clear: both;*/
+    /*}*/
+    /*.certificate-create .certificate-row__lbl {*/
+        /*font-weight: normal;*/
+    /*}*/
+    /*.certificate-create .certificate-row .form__input {*/
+        /*padding: 1.6rem 2rem 2rem;*/
+        /*min-height: 10.5rem;*/
+        /*max-height: 10.5rem;*/
+    /*}*/
+    /*.certificate-create .certificate-select {*/
+        /*font-size: 1.8rem;*/
+        /*margin: -1.3rem 0 0;*/
+        /*width: 62% !important;*/
+    /*}*/
+    /*.certificate-details {*/
+        /*text-align: left;*/
+        /*padding: .5rem 0 3.7rem;*/
+        /*font-size: 2.2rem;*/
+        /*margin-bottom: 1.7rem;*/
+        /*overflow: visible;*/
+    /*}*/
+    /*.certificate-details__items {*/
+        /*margin: 0 0 0 .5rem;*/
+        /*font-size: 2rem;*/
+    /*}*/
+    /*.certificate-details__items input {*/
+        /*margin-right: 2rem;*/
+        /*top: 0;*/
+    /*}*/
+    /*.certificate-details__items label {*/
+        /*color: #737373;*/
+    /*}*/
+    /*.certificate-details__header {*/
+        /*text-align: left;*/
+        /*font-size: 2.2rem;*/
+    /*}*/
+    /*.certificate-details .certificate-row {*/
+        /*float: none !important;*/
+        /*width: 100% !important;*/
+    /*}*/
+    /*.certificate-details .certificate-row:first-child {*/
+        /*margin: 0 0 3rem;*/
+    /*}*/
+    /*.certificate-details .certificate-row input {*/
+        /*position: static;*/
+        /*margin-left: 0;*/
+    /*}*/
+    /*.certificate-success {*/
+        /*margin: 1rem 0 0;*/
+        /*text-align: left;*/
+        /*padding: 10.8rem 4.3rem 0;*/
+        /*background-size: 60%;*/
+    /*}*/
+    /*.certificate-success__title {*/
+        /*text-align: left;*/
+        /*font-size: 3.1rem;*/
+        /*line-height: 5rem;*/
+        /*margin: 0;*/
+        /*width: 80%;*/
+    /*}*/
+    /*.certificate-success__msg {*/
+        /*width: 100%;*/
+        /*margin: 4.3rem 0 0;*/
+        /*font-size: 1.8rem;*/
+        /*line-height: 3rem;*/
+    /*}*/
+    /*.body-certificate-success  {*/
+        /*padding: 0 0 6rem !important;*/
+        /*border-bottom: 1px solid #dad0e2;*/
+    /*}*/
+/*}*/
+/*@media only screen and (max-width: 1023px) and (min-width: 768px) {*/
+    /*.certificate-header .certificate-go-back__link {*/
+        /*right: 3rem;*/
+    /*}*/
+/*}*/
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {*/
+    /*.certificate-header img {*/
+        /*display: none;*/
+    /*}*/
+    /*.certificate-header img:not(.hide-on-retina) {*/
+        /*display: inline-block;*/
+    /*}*/
+    /*.certificate-header img {*/
+        /*width: 274px;*/
+        /*height: 105px;*/
+    /*}*/
+    /*.certificate-navigation__item.complete a:before,*/
+    /*.certificate-navigation__item.complete span:before {*/
+        /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/complete_retina.png') no-repeat 0 0;*/
+        /*background-size: 22px 18px;*/
+    /*}*/
+     /*.ui-datepicker-next.ui-state-disabled .ui-icon {*/
+        /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/arrow_next_disabled_retina.png') no-repeat 0 0;*/
+        /*background-size: auto 15px;*/
+    /*}*/
+     /*.ui-datepicker-next .ui-icon {*/
+        /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/arrow_next_retina.png') no-repeat center center;*/
+        /*background-size: auto 15px;*/
+    /*}*/
+     /*.ui-datepicker-prev.ui-state-disabled .ui-icon {*/
+        /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/arrow_prev_disabled_retina.png') no-repeat 0 0;*/
+        /*background-size: auto 15px;*/
+    /*}*/
+     /*.ui-datepicker-prev .ui-icon {*/
+        /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/arrow_prev_retina.png') no-repeat 0 0;*/
+        /*background-size: auto 15px;*/
+    /*}*/
+    /*.cart__giftcard .icon_giftcard {*/
+        /*background: url('http://urbandecayofficial.ru/skin/frontend/kerastase/default/img/certificate/cart_retina.png') no-repeat center center;*/
+        /*background-size: 50px auto;*/
+    /*}*/
+    /*.coupon-cart__input {*/
+        /*border-radius: 0;*/
+    /*}*/
+/*}*/

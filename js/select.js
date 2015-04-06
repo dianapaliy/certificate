@@ -1,5 +1,6 @@
 $(function() {
     $("#certificateAmount").select2({
-        minimumResultsForSearch: Infinity
+        width: '100%',
+        minimumResultsForSearch: -1
     });
 });

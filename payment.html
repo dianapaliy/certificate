@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kiehl's certificate</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link href="css/select2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css">
     <!--<script type="text/javascript" src="http://urbandecayofficial.ru/skin/frontend/kerastase/default/js/lib/select2_locale_ru.js"></script>-->
 </head>
 <body>
@@ -20,12 +22,19 @@
 </header>
 <div class="page">
     <div class="page__i">
-        <ul class="nav">
-            <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
-            <li class="nav__item nav__item_active"><span>Оплата</span></li>
-            <li class="nav__item"><span>Подтверждение</span></li>
-        </ul>
+        <div class="nav-wr">
+            <ul class="nav">
+                <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
+                <li class="nav__item nav__item-arrow"><span></span></li>
+                <li class="nav__item nav__item_active"><span>Оплата</span></li>
+                <li class="nav__item nav__item-arrow"><span></span></li>
+                <li class="nav__item"><span>Подтверждение</span></li>
+            </ul>
+        </div>
         <div class="content">
+            <p class="content__title_mob">
+                оплата
+            </p>
             <form action="" id="certificate" class="form">
                 <div class="create create-item">
                     <div class="create__image">
@@ -38,22 +47,27 @@
                         <p class="create__title">
                             Подарочный сертификат Kiehl’s
                         </p>
+                        <p class="create__expiration_mob">
+                            Действителен до <span class="date">03.04.2016</span>
+                        </p>
                         <div class="row">
                             <label for="certificationAmount" class="row__lbl create__lbl">
                                 Номинал:
                             </label>
-                            <select name="certificate[amount]" id="certificateAmount" class="select">
-                                <option value="1000" ><span class="price">1 000 руб</span></option>
-                                <option value="2000" ><span class="price">2 000 руб</span></option>
-                                <option value="3000" ><span class="price">3 000 руб</span></option>
-                                <option value="4000" ><span class="price">4 000 руб</span></option>
-                                <option value="5000" ><span class="price">5 000 руб</span></option>
-                                <option value="6000" ><span class="price">6 000 руб</span></option>
-                                <option value="7000" ><span class="price">7 000 руб</span></option>
-                                <option value="8000" ><span class="price">8 000 руб</span></option>
-                                <option value="9000" ><span class="price">9 000 руб</span></option>
-                                <option value="10000" ><span class="price">10 000 руб</span></option>
-                            </select>
+                            <div class="select-wr">
+                                <select name="certificate[amount]" id="certificateAmount" class="select">
+                                    <option value="1000" ><span class="price">1 000 руб</span></option>
+                                    <option value="2000" ><span class="price">2 000 руб</span></option>
+                                    <option value="3000" ><span class="price">3 000 руб</span></option>
+                                    <option value="4000" ><span class="price">4 000 руб</span></option>
+                                    <option value="5000" ><span class="price">5 000 руб</span></option>
+                                    <option value="6000" ><span class="price">6 000 руб</span></option>
+                                    <option value="7000" ><span class="price">7 000 руб</span></option>
+                                    <option value="8000" ><span class="price">8 000 руб</span></option>
+                                    <option value="9000" ><span class="price">9 000 руб</span></option>
+                                    <option value="10000" ><span class="price">10 000 руб</span></option>
+                                </select>
+                            </div>
                         </div>
                         <!--<p class="create__expiration mobile-elem">-->
                             <!--Действителен до <span class="date">03.04.2016</span>-->
@@ -117,17 +131,17 @@
                             <label class="details__lbl" for="certificateSendInTime">В выбранное время (московское)</label>
                         </div>
                     </div>
-                    <!--<div class="calendar" id="certificateCalendar" >-->
-                        <!--<div id="datetimepicker"></div>-->
-                        <!--<input type="hidden" name="certificate[date_send]" value="" id="date_send">-->
-                    <!--</div>-->
+                    <div class="calendar" id="certificateCalendar" >
+                        <div id="datetimepicker"></div>
+                        <input type="hidden" name="certificate[date_send]" value="" id="date_send">
+                    </div>
                 </div>
 
                 <div class="create-item finish">
                     <div class="row">
-                        <input name="is_accept" value="1" class="checkbox input_checkbox" id="certificateAgreement" type="checkbox">
+                        <input name="is_accept" value="1" class="checkbox input_checkbox checkbox_finish" id="certificateAgreement" type="checkbox">
                         <label for="certificateAgreement">
-                            Согласен с <a href="#" target="_blank">&laquo;Условиями покупки подарочного сертификата&raquo;</a>
+                            Я согласен с <a href="#" target="_blank">"Условиями покупки подарочного сертификата"</a>
                         </label>
                     </div>
                     <div class="row row_button">
@@ -156,8 +170,11 @@
     </div>
 </footer>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/select2.min.js"></script>
-<script type="text/javascript" src="js/select.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/timepicker.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+<script type="text/javascript" src="js/certificate.js"></script>
 </body>
 </html>
