@@ -49,6 +49,28 @@
             color: #000;
             margin: 2px auto 25px;
         }
+        //-----------4page--------------------//
+        &_finished{
+            max-width: 87%;
+            text-align: center;
+            padding: 100px 0 102px 0;
+        }
+        &__title{
+            width: 74%;
+            margin: 0 auto;
+            padding: 0 0 33px 0;
+            line-height: 1.25em;
+        }
+        &__text{
+            padding-bottom: 28px;
+            line-height: 1.42em;
+
+        }
+        &__link{
+            color: #e24c42;
+            border-bottom: 1px solid #e24c42;
+        }
+        //-----------end---4page--------------------//
     }
     .login{
         width: 100%;
@@ -271,14 +293,12 @@
     .finish {
         margin: 0 auto;
         text-align: center;
-//        font-size: 14px;
         padding: 0;
         .input_checkbox + label{
             font-family: Arial;
             letter-spacing: -0.5px;
             line-height: 1.5em;
-//            margin: 1px 0 1px 28px;
-//            padding: 0;
+            display: block;
         }
 
     }
@@ -314,18 +334,16 @@
         }
     }
     .select-wr{
-        width: 65% !important;
+//        width: 65% !important;
+        width: 82% !important;
         display: inline-block;
-        //    float: right;
     }
     .select {
-        //    width: 59% !important;
         float: right;
         margin: -0.6rem 0 0;
         font-size: 14/16em;
         font-family: Arial;
         font-weight: normal;
-        //    margin: 0;
         position: relative;
         display: inline-block;
         /* inline-block for ie7 */
@@ -346,5 +364,24 @@
             border: none;
             content: " ";
         }
+    }
+}
+//--------------------end--2--page-----//
+@media only screen and (max-width: 690px){
+    .select-wr{
+        width: 78% !important;
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 535px){
+    .select-wr{
+        width: 70% !important;
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 370px){
+    .select-wr{
+        width: 65% !important;
+        display: inline-block;
     }
 }
