@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kiehl's certificate</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__i">
+        <a href="#">
+            <img class="header__logo" src="images/header_logo.png" alt=""/>
+            <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
+        </a>
+        <a class="header__link" href="#">Вернуться в магазин</a>
+    </div>
+</header>
+<div class="page">
+    <div class="page__i">
+        <div class="nav-wr">
+            <ul class="nav">
+                <li class="nav__item nav__item_active"><span>Авторизация</span></li>
+                <li class="nav__item nav__item-arrow nav__item-arrow_before"><span></span></li>
+                <li class="nav__item"><span>Оплата</span></li>
+                <li class="nav__item nav__item-arrow nav__item-arrow_after"><span></span></li>
+                <li class="nav__item"><span>Подтверждение</span></li>
+            </ul>
+        </div>
+        <div class="content content_require">
+            <p class="content__title_mob content__title_require">
+                оплата
+            </p>
+            <div class="content__order-info">
+                <div class="content__image">
+                    <img src="images/certificate.png" alt="">
+                </div>
+                <p class="content__order">Номер заказа: <span>KH-456381-U</span></p>
+                <p class="content__order">Интернет-магазин: <span>Kiehl’s</span></p>
+                <p class="content__order content__order_last">Сумма к оплате: <span>1000,00 Р</span></p>
+                <div class="content__session">
+                    <span class="content__session-text">До завершения сеанса осталось</span>
+                    <span class="content__session-time">15:00</span>
+                </div>
+                <p class="content__info">Пожалуйста, введите реквизиты платежного средства и нажмите кнопку “Оплатить”.</p>
+                <p class="content__info">По завершению оплаты вы будете автоматически перенаправлены на страницу интернет-магазина. </p>
+            </div>
+            <form class="form form_require" action="">
+                <p class="form__title">
+                    Реквизиты карты
+                </p>
+                <div class="form__view form__view_front">
+                    <div class="row row_require-mob">
+                        <input name="numberCard" id="numberCard" placeholder="Номер карты"
+                               value="" class="form__input number-card" type="text">
+                    </div>
+                    <div class="row">
+                        <input name="nameOwner" id="nameOwner" placeholder="Имя и фамилия держателя"
+                               value="" class="form__input name-owner" type="text">
+                    </div>
+                    <div class="row row_last row_time">
+                        <span>Срок действия</span>
+                        <div class="form__input_time">
+                            <input name="mm" id="mm" placeholder="мм"
+                                   value="" class="form__input form__input_min" type="text">
+                            <input name="yy" id="yy" placeholder="гг"
+                                   value="" class="form__input form__input_min" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form__view form__view_back">
+                    <div class="row row_grey"></div>
+                    <div class="row row_code">
+                        <span>Код CVC2/CVV2</span>
+                        <input name="code" id="code" placeholder="Код"
+                               value="" class="form__input form__input_code" type="text">
+                    </div>
+                    <div class="row row_last">
+                        <p>
+                            Кодом CVC2/CVV2 являются 3 последние
+                            цифры на обратной стороне карты
+                        </p>
+                    </div>
+                </div>
+                <div class="btn-block">
+                    <button type="submit" class="btn-invert disabled btn-require btn-require_clear notActive" name="send">
+                        очистить
+                    </button><!---
+                    ---><button type="submit" class="btn-invert disabled btn-require" name="send">
+                        Оплатить
+                    </button>
+                </div>
+            </form>
+        </div>
+        <a class="back-link" href="#">Вернуться в магазин</a>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__i">
+        <ul class="footer__list">
+            <li class="footer__item footer__item_tel">
+                <a href="tel:8 800 500 16 57">
+                    8 800 500 16 57
+                </a>
+            </li><!--
+            --><li class="footer__item footer__item_info">
+            <a href="#">
+                Правовая информация
+            </a>
+        </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

@@ -135,7 +135,7 @@ body{
     &__title_mob{
         display: none;
     }
-
+    //-----------4page--------------------//
     &_finished{
         text-align: center;
         padding: 110px 0 277px 9%;
@@ -158,6 +158,67 @@ body{
         color: #e24c42;
         border-bottom: 1px solid #e24c42;
     }
+    //--------------3page--------------------//
+    &_require{
+        padding-bottom: 67px;
+    }
+
+    &__order-info{
+        position: relative;
+        border-bottom: 2px dotted #ccc;
+        padding-bottom: 25px;
+    }
+    &__image{
+        display: none;
+    }
+    &__order{
+        font-size: 18/16em;
+        font-weight: normal;
+        font-family: Arial;
+        text-align: left;
+        padding-bottom: 20px;
+        span{
+            font-weight: bold;
+        }
+        &_last{
+            padding-bottom: 41px;
+        }
+    }
+    &__info{
+        font-size: 12/16em;
+        font-weight: normal;
+        font-family: Arial;
+        text-align: left;
+        padding-bottom: 11px;
+        letter-spacing: -0.1px;
+    }
+    &__session{
+        width: 260px;
+        height: 70px;
+        background: #212121;
+        padding: 19px 16px 19px 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    &__session-text{
+        color: #fff;
+        font-size: 14/16em;
+        font-weight: normal;
+        font-family: Arial;
+        float: left;
+        width: 50%;
+    }
+    &__session-time{
+        color: #fff;
+        font-size: 40/16em;
+        font-weight: normal;
+        font-family: Arial;
+        float: right;
+        line-height: 0.8em;
+    }
+    //---------------------------------//
 }
 .login{
     width: 280/655*100%;
@@ -248,6 +309,7 @@ body{
     }
 }
 .form{
+    .clearfix;
     &__row{
         margin-bottom: 20px;
         &_remember{
@@ -267,6 +329,24 @@ body{
         font-family: Arial;
         color: #b0b0b0;
         box-shadow: none;
+        &_min {
+            width: 63/140*100%;
+            float: left;
+            &:last-child {
+                margin: 0;
+                float: right;
+            }
+        }
+        &_code{
+            width: 111/246*100%;
+            display: inline-block;
+        }
+        &_time{
+            width: 140/246*100%;
+            float: right;
+            right: 0;
+            .clearfix;
+        }
     }
     &__label{
         font-size: 14/16em;
@@ -280,6 +360,35 @@ body{
         min-height: 100px;
         max-height: 100px;
     }
+    //-------------3page-------------//
+    &__title{
+        font-size: 18/16em;
+        font-family: "Times New Roman";
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 25px 0 34px;
+    }
+    &__view{
+        width: 313/668*100%;
+        height: 201px;
+        padding: 30px 30px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        &_front{
+            float: left;
+        }
+        &_back{
+            float: right;
+            position: relative;
+            padding: 30px 25px 30px 40px;
+        }
+    }
+    //--------------------------------//
+}
+.number-card,
+.name-owner{
+    padding: 6px 7px;
 }
 .input{
     &_checkbox {
@@ -350,6 +459,21 @@ body{
 .btn-invert:hover{
     color: #000;
     background: #fff;
+}
+.notActive{
+    color: #000;
+    background: #fff;
+}
+.btn-block{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 60px 0 0 0;
+}
+.btn-require{
+    font-size: 18/16em;
+    padding: 13px 30px;
+    margin: 0 20px;
 }
 .advantage{
     float: right;
@@ -574,6 +698,48 @@ body{
     &_button {
         margin: 77px 0 0;
     }
+    span{
+        font-size: 14/16em;
+        font-weight: normal;
+        font-family: Arial;
+        margin-right: 7px;
+    }
+    &_last{
+        padding: 9px 0 0 0;
+        margin-bottom: 0;
+    }
+    &_grey{
+        background: #a6a6a6;
+        position: absolute;
+        height: 30px;
+        width: 100%;
+        left: 0;
+    }
+    &_code{
+        margin-top: 49px;
+        span{
+            font-size: 14/16em;
+            font-weight: normal;
+            font-family: Arial;
+            margin-right: 17px;
+        }
+    }
+    &_time{
+        span{
+            font-size: 14/16em;
+            font-weight: normal;
+            font-family: Arial;
+            float: left;
+            margin-top: 8px;
+            margin-right: 0;
+        }
+    }
+    p{
+        font-size: 12/16em;
+        font-weight: normal;
+        font-family: Arial;
+        color: #a6a6a6;
+    }
 }
 .select-wr{
     width: 63% !important;
@@ -677,5 +843,8 @@ body{
 @media only screen and (max-width: 860px){
     .header__link{
         right: -7%;
+    }
+    .row p{
+        font-size: 0.65em;
     }
 }
