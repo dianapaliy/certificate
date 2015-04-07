@@ -45,7 +45,7 @@
                 <p class="content__info">Пожалуйста, введите реквизиты платежного средства и нажмите кнопку “Оплатить”.</p>
                 <p class="content__info">По завершению оплаты вы будете автоматически перенаправлены на страницу интернет-магазина. </p>
             </div>
-            <form class="form form_require" action="">
+            <form id="require" class="form form_require" action="">
                 <p class="form__title">
                     Реквизиты карты
                 </p>
@@ -59,7 +59,7 @@
                                value="" class="form__input name-owner" type="text">
                     </div>
                     <div class="row row_last row_time">
-                        <span>Срок действия</span>
+                        <span class="row__span">Срок действия</span>
                         <div class="form__input_time">
                             <input name="mm" id="mm" placeholder="мм"
                                    value="" class="form__input form__input_min" type="text">
@@ -71,7 +71,7 @@
                 <div class="form__view form__view_back">
                     <div class="row row_grey"></div>
                     <div class="row row_code">
-                        <span>Код CVC2/CVV2</span>
+                        <span class="row__span">Код CVC2/CVV2</span>
                         <input name="code" id="code" placeholder="Код"
                                value="" class="form__input form__input_code" type="text">
                     </div>
@@ -83,10 +83,10 @@
                     </div>
                 </div>
                 <div class="btn-block">
-                    <button type="submit" class="btn-invert disabled btn-require btn-require_clear notActive" name="send">
+                    <button type="submit" class="btn-invert disabled btn-require btn-require_clear notActive" id="clear" name="clear">
                         очистить
                     </button><!---
-                    ---><button type="submit" class="btn-invert disabled btn-require" name="send">
+                    ---><button type="submit" class="btn-invert disabled btn-require" name="pay">
                         Оплатить
                     </button>
                 </div>
@@ -111,5 +111,9 @@
         </ul>
     </div>
 </footer>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

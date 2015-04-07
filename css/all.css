@@ -452,6 +452,14 @@ a {
 body {
   background: url("../images/bg.png") repeat;
 }
+.error {
+  font-size: 0.6875em;
+  color: #e71c25;
+  font-family: Arial;
+  text-transform: lowercase;
+  position: relative;
+  margin-bottom: 5px;
+}
 .header {
   position: relative;
   text-align: center;
@@ -902,10 +910,6 @@ body {
   color: #000;
   background: #fff;
 }
-.notActive {
-  color: #000;
-  background: #fff;
-}
 .btn-block {
   float: left;
   width: 100%;
@@ -1144,6 +1148,10 @@ body {
 .finish .btn {
   font-size: 1em;
 }
+.finish .error {
+  text-align: left;
+  padding: 0 0 0 21%;
+}
 .btn {
   padding: 15px 37px;
   font-size: 1.125em;
@@ -1180,7 +1188,7 @@ body {
 .row_button {
   margin: 77px 0 0;
 }
-.row span {
+.row__span {
   font-size: 0.875em;
   font-weight: normal;
   font-family: Arial;
