@@ -7,99 +7,100 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 <body>
-<header class="header">
-    <div class="header__i">
-        <a href="#">
-            <img class="header__logo" src="images/header_logo.png" alt=""/>
-            <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
-        </a>
-        <a class="header__link" href="#">Вернуться в магазин</a>
-    </div>
-</header>
-<div class="page">
-    <div class="page__i">
-        <div class="nav-wr">
-            <ul class="nav nav-require">
-                <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
-                <li class="nav__item nav__item-arrow nav__item-arrow_before"><span></span></li>
-                <li class="nav__item nav__item_checked"><span>Оплата</span></li>
-                <li class="nav__item nav__item-arrow nav__item-arrow_after"><span></span></li>
-                <li class="nav__item nav__item_active"><span>Подтверждение</span></li>
-            </ul>
+<div class="wr">
+    <header class="header">
+        <div class="header__i">
+            <a href="#">
+                <img class="header__logo" src="images/header_logo.png" alt=""/>
+                <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
+            </a>
+            <a class="header__link" href="#">Вернуться в магазин</a>
         </div>
-        <div class="content content_require">
-            <p class="content__title_mob content__title_require">
-                оплата
-            </p>
-            <div class="content__order-info">
-                <div class="content__image">
-                    <img src="images/certificate.png" alt="">
-                </div>
-                <p class="content__order">Номер заказа: <span>KH-456381-U</span></p>
-                <p class="content__order">Интернет-магазин: <span>Kiehl’s</span></p>
-                <p class="content__order content__order_last">Сумма к оплате: <span>1000,00 Р</span></p>
-                <div class="content__session">
-                    <span class="content__session-text">До завершения сеанса осталось</span>
-                    <span class="content__session-time">15:00</span>
-                </div>
-                <p class="content__info">Пожалуйста, введите реквизиты платежного средства и нажмите кнопку “Оплатить”.</p>
-                <p class="content__info">По завершению оплаты вы будете автоматически перенаправлены на страницу интернет-магазина. </p>
+    </header>
+    <div class="page">
+        <div class="page__i">
+            <div class="nav-wr">
+                <ul class="nav nav-require">
+                    <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
+                    <li class="nav__item nav__item-arrow nav__item-arrow_before"><span></span></li>
+                    <li class="nav__item nav__item_checked"><span>Оплата</span></li>
+                    <li class="nav__item nav__item-arrow nav__item-arrow_after"><span></span></li>
+                    <li class="nav__item nav__item_active"><span>Подтверждение</span></li>
+                </ul>
             </div>
-            <form id="require" class="form form_require" action="">
-                <p class="form__title">
-                    Реквизиты карты
+            <div class="content content_require">
+                <p class="content__title_mob content__title_require">
+                    оплата
                 </p>
-                <div class="form__view form__view_front">
-                    <div class="row row_require-mob">
-                        <input name="numberCard" id="numberCard" placeholder="Номер карты"
-                               value="" class="form__input number-card numeric" type="text" maxlength="19">
+                <div class="content__order-info">
+                    <div class="content__image">
+                        <img src="images/certificate.png" alt="">
                     </div>
-                    <div class="row">
-                        <input name="nameOwner" id="nameOwner" placeholder="Имя и фамилия держателя"
-                               value="" class="form__input name-owner" type="text">
+                    <p class="content__order">Номер заказа: <span>KH-456381-U</span></p>
+                    <p class="content__order">Интернет-магазин: <span>Kiehl’s</span></p>
+                    <p class="content__order content__order_last">Сумма к оплате: <span>1000,00 Р</span></p>
+                    <div class="content__session">
+                        <span class="content__session-text">До завершения сеанса осталось</span>
+                        <span class="content__session-time">15:00</span>
                     </div>
-                    <div class="row row_last row_time">
-                        <span class="row__span">Срок действия</span>
-                        <div class="form__input_time">
-                            <div class="row_min">
-                                <input name="mm" id="mm" placeholder="мм"
-                                       value="" class="form__input form__input_min" type="text">
-                            </div>
-                            <div class="row_min">
-                                <input name="yy" id="yy" placeholder="гг"
-                                       value="" class="form__input form__input_min" type="text">
+                    <p class="content__info">Пожалуйста, введите реквизиты платежного средства и нажмите кнопку “Оплатить”.</p>
+                    <p class="content__info">По завершению оплаты вы будете автоматически перенаправлены на страницу интернет-магазина. </p>
+                </div>
+                <form id="require" class="form form_require" action="">
+                    <p class="form__title">
+                        Реквизиты карты
+                    </p>
+                    <div class="form__view form__view_front">
+                        <div class="row row_require-mob">
+                            <input name="numberCard" id="numberCard" placeholder="Номер карты"
+                                   value="" class="form__input number-card numeric" type="text" maxlength="19">
+                        </div>
+                        <div class="row">
+                            <input name="nameOwner" id="nameOwner" placeholder="Имя и фамилия держателя"
+                                   value="" class="form__input name-owner" type="text">
+                        </div>
+                        <div class="row row_last row_time">
+                            <span class="row__span">Срок действия</span>
+                            <div class="form__input_time">
+                                <div class="row_min">
+                                    <input name="mm" id="mm" placeholder="мм"
+                                           value="" class="form__input form__input_min numeric" type="text" maxlength="2">
+                                </div>
+                                <div class="row_min">
+                                    <input name="yy" id="yy" placeholder="гг"
+                                           value="" class="form__input form__input_min numeric year" type="text" maxlength="2">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form__view form__view_back">
-                    <div class="row row_grey"></div>
-                    <div class="row row_code">
-                        <span class="row__span">Код CVC2/CVV2</span>
-                        <input name="code" id="code" placeholder="Код"
-                               value="" class="form__input form__input_code numeric" type="text" maxlength="3">
+                    <div class="form__view form__view_back">
+                        <div class="row row_grey"></div>
+                        <div class="row row_code">
+                            <span class="row__span">Код CVC2/CVV2</span>
+                            <input name="code" id="code" placeholder="Код"
+                                   value="" class="form__input form__input_code numeric" type="text" maxlength="3">
+                        </div>
+                        <div class="row row_last">
+                            <p>
+                                Кодом CVC2/CVV2 являются 3 последние
+                                цифры на обратной стороне карты
+                            </p>
+                        </div>
                     </div>
-                    <div class="row row_last">
-                        <p>
-                            Кодом CVC2/CVV2 являются 3 последние
-                            цифры на обратной стороне карты
-                        </p>
+                    <div class="btn-block">
+                        <button type="submit" class="btn-invert disabled btn-require btn-require_clear notActive" id="clear" name="clear">
+                            очистить
+                        </button><!---
+                        ---><button type="submit" class="btn-invert disabled btn-require" name="pay">
+                            Оплатить
+                        </button>
                     </div>
-                </div>
-                <div class="btn-block">
-                    <button type="submit" class="btn-invert disabled btn-require btn-require_clear notActive" id="clear" name="clear">
-                        очистить
-                    </button><!---
-                    ---><button type="submit" class="btn-invert disabled btn-require" name="pay">
-                        Оплатить
-                    </button>
-                </div>
-            </form>
+                </form>
+            </div>
+            <a class="back-link" href="#">Вернуться в магазин</a>
         </div>
-        <a class="back-link" href="#">Вернуться в магазин</a>
     </div>
-</div>
-<footer class="footer">
+    <footer class="footer">
     <div class="footer__i">
         <ul class="footer__list">
             <li class="footer__item footer__item_tel">
@@ -115,6 +116,7 @@
         </ul>
     </div>
 </footer>
+</div>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>

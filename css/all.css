@@ -420,9 +420,7 @@ input {
   /* mobile firefox too! */
 }
 .container,
-.header,
-.page,
-.footer {
+.wr {
   max-width: 1108px;
   padding: 0 78px;
   margin: 0 auto;
@@ -462,6 +460,11 @@ div.error {
   text-transform: lowercase;
   position: absolute;
   margin-bottom: 5px;
+}
+.wr {
+  background: #fff;
+  min-height: 100%;
+  overflow: hidden;
 }
 .header {
   position: relative;
@@ -527,7 +530,7 @@ div.error {
   font-size: 1.5em;
   font-weight: bold;
   font-family: Times New Roman;
-  color: #525252;
+  color: #a6a6a6;
 }
 .nav__item_active {
   color: #000;
@@ -761,11 +764,6 @@ div.error {
   text-align: center;
   padding-top: 27px;
 }
-.login-form button {
-  font-size: 1em;
-  font-family: "Times New Roman";
-  font-weight: bold;
-}
 .form {
   *zoom: 1;
 }
@@ -783,7 +781,7 @@ div.error {
 }
 .form__row_remember {
   text-align: left;
-  margin: 24px 0 20px 0;
+  margin: 24px 0 17px 0;
   position: relative;
 }
 .form__input {
@@ -795,7 +793,8 @@ div.error {
   font-size: 0.875em;
   font-weight: normal;
   font-family: Arial;
-  color: #b0b0b0;
+  color: #a6a6a6;
+  letter-spacing: -0.1px;
   box-shadow: none;
 }
 .form__input_code {
@@ -820,7 +819,7 @@ div.error {
 .form__label {
   font-size: 0.875em;
   font-weight: normal;
-  letter-spacing: .5px;
+  letter-spacing: .1px;
   color: #000;
   font-family: Arial;
 }
@@ -911,10 +910,10 @@ div.error {
   cursor: pointer;
   background: #000;
   border: 1px solid #000;
-  font-size: 0.95em;
+  font-size: 1em;
   font-family: "Times New Roman";
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
 }
 .btn-invert_full-width {
   width: 100%;
@@ -931,7 +930,7 @@ div.error {
 }
 .btn-require {
   font-size: 1.125em;
-  padding: 13px 30px;
+  padding: 13px 33px;
   margin: 0 20px;
 }
 .advantage {
@@ -1156,7 +1155,8 @@ div.error {
   letter-spacing: -0.5px;
 }
 .finish .btn {
-  font-size: 1em;
+  font-size: 1.125em;
+  padding: 13px 33px;
 }
 .finish .error {
   text-align: left;
@@ -1338,6 +1338,9 @@ div.error {
   .header__link {
     right: 0;
   }
+  .nav-finished .nav__item-arrow {
+    margin: 0 20px 0 20px;
+  }
 }
 @media only screen and (max-width: 860px) {
   .header__link {
@@ -1350,9 +1353,7 @@ div.error {
 @media only screen and (max-width: 767px) {
   .container,
   .footer,
-  .header,
-  .page,
-  .footer {
+  .wr {
     max-width: 100%;
     padding: 0;
     margin: 0 auto;
@@ -1379,7 +1380,7 @@ div.error {
     display: none;
   }
   .header__i {
-    padding: 33px 0 17px;
+    padding: 33px 0 19px;
   }
   .page__i {
     width: 100%;
@@ -1416,7 +1417,7 @@ div.error {
     padding-bottom: 45px;
   }
   .content__title_require {
-    margin: 2px auto 20px;
+    margin: 0px auto 20px;
     max-width: 100%;
   }
   .content__order-info {
@@ -1473,6 +1474,7 @@ div.error {
     float: left;
     border-radius: 7px;
     margin-bottom: 28px;
+    background: #7a7a7a;
   }
   .content__session-text {
     color: #fff;
@@ -1493,7 +1495,7 @@ div.error {
   .content_finished {
     max-width: 87%;
     text-align: center;
-    padding: 100px 0 102px 0;
+    padding: 98px 0 102px 0;
   }
   .content__title {
     width: 74%;
@@ -1541,14 +1543,6 @@ div.error {
     padding: 7px 11px;
     letter-spacing: -0.3px;
   }
-  .form__input_min {
-    width: 41.42857143%;
-    float: left;
-  }
-  .form__input_min:last-child {
-    margin: 0;
-    float: right;
-  }
   .form__input_time {
     width: 49.82206406%;
     float: right;
@@ -1572,12 +1566,16 @@ div.error {
     min-height: 120px;
     max-height: 120px;
   }
+  .form__row_remember {
+    margin: 20px 0 19px 0;
+  }
   .form__title {
     text-align: left;
     padding: 20px 0 24px;
   }
   .form__view {
     width: 100%;
+    height: auto;
     padding: 0;
     border: none;
     border-radius: 0;
@@ -1594,6 +1592,7 @@ div.error {
     float: none;
     width: 100%;
     margin-top: 36px;
+    margin-bottom: 42px;
   }
   .back-link {
     display: block;
@@ -1679,6 +1678,9 @@ div.error {
   .create__content .row:last-child {
     margin: 0;
   }
+  .create__content .row span {
+    margin-right: 0;
+  }
   .create__title {
     display: none;
   }
@@ -1699,7 +1701,7 @@ div.error {
   }
   .create-item {
     *zoom: 1;
-    padding-bottom: 28px;
+    padding-bottom: 30px;
     position: relative;
     margin: 0 auto;
     border-bottom: none;
@@ -1715,7 +1717,7 @@ div.error {
   }
   .create-item:last-child {
     border: none;
-    margin: 41px auto 0;
+    margin: 37px auto 0;
   }
   .info {
     padding-bottom: 22px;
@@ -1756,7 +1758,7 @@ div.error {
     letter-spacing: -0.5px;
   }
   .details {
-    padding-bottom: 24px;
+    padding-bottom: 28px;
   }
   .details__header {
     font-size: 0.9375em;
@@ -1794,12 +1796,6 @@ div.error {
   .details__row:last-child {
     margin: 0 0 0 27px;
   }
-  .details__row:last-child input {
-    left: 0;
-  }
-  .details__row input {
-    left: 0;
-  }
   .details:after {
     content: '';
     position: absolute;
@@ -1818,6 +1814,10 @@ div.error {
     letter-spacing: -0.5px;
     line-height: 1.5em;
     display: block;
+  }
+  .finish .btn {
+    font-size: 1em;
+    padding: 9px 33px;
   }
   .checkbox_finish {
     left: 0;
@@ -1905,23 +1905,26 @@ div.error {
     font-size: 0.875em;
     font-weight: normal;
     font-family: Arial;
-    margin-right: 0;
+    margin-right: 8.89679715%;
     float: left;
     margin-top: 8px;
   }
   .row_time span {
-    font-size: 0.875em;
-    font-weight: normal;
-    font-family: Arial;
     float: left;
-    margin-top: 8px;
-    margin-right: 0;
   }
   .row p {
     font-size: 0.75em;
     font-weight: normal;
     font-family: Arial;
     color: #a6a6a6;
+  }
+  .row_min {
+    width: 41.42857143%;
+    float: left;
+  }
+  .row_min:last-child {
+    margin: 0;
+    float: right;
   }
   .select-wr {
     width: 82% !important;

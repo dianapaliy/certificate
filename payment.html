@@ -10,152 +10,153 @@
     <link rel="stylesheet" type="text/css" href="css/calendar.css">
 </head>
 <body>
-<header class="header">
-    <div class="header__i">
-        <a href="#">
-            <img class="header__logo" src="images/header_logo.png" alt=""/>
-            <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
-        </a>
-        <a class="header__link" href="#">Вернуться в магазин</a>
-    </div>
-</header>
-<div class="page">
-    <div class="page__i">
-        <div class="nav-wr">
-            <ul class="nav nav-payment">
-                <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
-                <li class="nav__item nav__item-arrow"><span></span></li>
-                <li class="nav__item nav__item_active"><span>Оплата</span></li>
-                <li class="nav__item nav__item-arrow"><span></span></li>
-                <li class="nav__item"><span>Подтверждение</span></li>
-            </ul>
+<div class="wr">
+    <header class="header">
+        <div class="header__i">
+            <a href="#">
+                <img class="header__logo" src="images/header_logo.png" alt=""/>
+                <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
+            </a>
+            <a class="header__link" href="#">Вернуться в магазин</a>
         </div>
-        <div class="content">
-            <p class="content__title_mob">
-                оплата
-            </p>
-            <form action="" id="certificate" class="form">
-                <div class="create create-item">
-                    <div class="create__image">
-                        <img src="images/certificate.png" alt="">
-                        <p class="create__expiration">
-                            Действителен до <span class="date">03.04.2016</span>
-                        </p>
+    </header>
+    <div class="page">
+        <div class="page__i">
+            <div class="nav-wr">
+                <ul class="nav nav-payment">
+                    <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
+                    <li class="nav__item nav__item-arrow"><span></span></li>
+                    <li class="nav__item nav__item_active"><span>Оплата</span></li>
+                    <li class="nav__item nav__item-arrow"><span></span></li>
+                    <li class="nav__item"><span>Подтверждение</span></li>
+                </ul>
+            </div>
+            <div class="content">
+                <p class="content__title_mob">
+                    оплата
+                </p>
+                <form action="" id="certificate" class="form">
+                    <div class="create create-item">
+                        <div class="create__image">
+                            <img src="images/certificate.png" alt="">
+                            <p class="create__expiration">
+                                Действителен до <span class="date">03.04.2016</span>
+                            </p>
+                        </div>
+                        <div class="create__about">
+                            <p class="create__title_mob">
+                                Подарочный сертификат Kiehl’s
+                            </p>
+                            <p class="create__expiration_mob">
+                                Действителен до <span class="date">03.04.2016</span>
+                            </p>
+                        </div>
+                        <div class="create__content">
+                            <p class="create__title">
+                                Подарочный сертификат Kiehl’s
+                            </p>
+                            <div class="row">
+                                <label for="certificationAmount" class="row__lbl create__lbl">
+                                    Номинал:
+                                </label>
+                                <div class="select-wr">
+                                    <select name="certificate[amount]" id="certificateAmount" class="select">
+                                        <option value="1000" ><span class="price">1 000 руб</span></option>
+                                        <option value="2000" ><span class="price">2 000 руб</span></option>
+                                        <option value="3000" ><span class="price">3 000 руб</span></option>
+                                        <option value="4000" ><span class="price">4 000 руб</span></option>
+                                        <option value="5000" ><span class="price">5 000 руб</span></option>
+                                        <option value="6000" ><span class="price">6 000 руб</span></option>
+                                        <option value="7000" ><span class="price">7 000 руб</span></option>
+                                        <option value="8000" ><span class="price">8 000 руб</span></option>
+                                        <option value="9000" ><span class="price">9 000 руб</span></option>
+                                        <option value="10000" ><span class="price">10 000 руб</span></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <textarea class="textarea form__input form__textarea" name="certificate[message]"
+                                          placeholder="Ваше поздравление"></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="create__about">
-                        <p class="create__title_mob">
-                            Подарочный сертификат Kiehl’s
-                        </p>
-                        <p class="create__expiration_mob">
-                            Действителен до <span class="date">03.04.2016</span>
-                        </p>
-                    </div>
-                    <div class="create__content">
-                        <p class="create__title">
-                            Подарочный сертификат Kiehl’s
-                        </p>
-                        <div class="row">
-                            <label for="certificationAmount" class="row__lbl create__lbl">
-                                Номинал:
+                    <div class="create-item info">
+                        <div class="info__i">
+                            <label class="info__lbl row__lbl" for="certificateSenderEmail">
+                                От кого:
                             </label>
-                            <div class="select-wr">
-                                <select name="certificate[amount]" id="certificateAmount" class="select">
-                                    <option value="1000" ><span class="price">1 000 руб</span></option>
-                                    <option value="2000" ><span class="price">2 000 руб</span></option>
-                                    <option value="3000" ><span class="price">3 000 руб</span></option>
-                                    <option value="4000" ><span class="price">4 000 руб</span></option>
-                                    <option value="5000" ><span class="price">5 000 руб</span></option>
-                                    <option value="6000" ><span class="price">6 000 руб</span></option>
-                                    <option value="7000" ><span class="price">7 000 руб</span></option>
-                                    <option value="8000" ><span class="price">8 000 руб</span></option>
-                                    <option value="9000" ><span class="price">9 000 руб</span></option>
-                                    <option value="10000" ><span class="price">10 000 руб</span></option>
-                                </select>
+                            <div class="rows">
+                                <div class="row">
+                                    <input name="certificate[sender_email]" id="certificateSenderEmail" placeholder="E-mail"
+                                           value="" class="form__input email" type="email">
+                                </div>
+                                <div class="row">
+                                    <input name="certificate[sender_name]" id="certificateSenderName" placeholder="Имя отправителя"
+                                           value="" class="form__input" type="text">
+                                </div>
                             </div>
                         </div>
+                        <div class="info__i">
+                            <label class="info__lbl row__lbl" for="certificateRecipientEmail">
+                                Кому:
+                            </label>
+                            <div class="rows">
+                                <div class="row">
+                                    <input name="certificate[recipient_email]" id="certificateRecipientEmail" placeholder="E-mail"
+                                           type="email" class="form__input email" value="">
+                                </div>
+                                <div class="row">
+                                    <input name="certificate[recipient_name]" id="certificateRecipientName" type="text"
+                                           placeholder="Имя получателя" class="form__input" value="">
+                                </div>
+                                <div class="row">
+                                    <input name="certificate[recipient_telephone]" id="certificateRecipientTelephone"
+                                           placeholder="Телефон" type="tel" class="form__input" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="create-item details">
+                        <p class="details__header">
+                            Когда отправлять?
+                        </p>
+                        <div class="details__items">
+                            <div class="row details__row">
+                                <input id="certificateSendAfterPayment" name="certificate[send_method]"
+                                       class="js-certificate-choose-time radio radio_time" value="after_payment" checked type="radio">
+                                <label class="details__lbl" for="certificateSendAfterPayment">Сразу после оплаты</label>
+                            </div>
+                            <div class="row details__row">
+                                <input id="certificateSendInTime" name="certificate[send_method]"
+                                       class="js-certificate-choose-time radio radio_time" value="after_date" type="radio">
+                                <label class="details__lbl" for="certificateSendInTime">В выбранное время (московское)</label>
+                            </div>
+                        </div>
+                        <div class="calendar" id="certificateCalendar" >
+                            <div id="datetimepicker"></div>
+                            <input type="hidden" name="certificate[date_send]" value="" id="date_send">
+                        </div>
+                    </div>
+
+                    <div class="create-item finish">
                         <div class="row">
-                            <textarea class="textarea form__input form__textarea" name="certificate[message]"
-                                      placeholder="Ваше поздравление"></textarea>
+                            <input name="is_accept" value="1" class="checkbox input_checkbox checkbox_finish" id="certificateAgreement" type="checkbox">
+                            <label for="certificateAgreement">
+                                Я согласен с "<a href="#" target="_blank">Условиями покупки подарочного сертификата</a>"
+                            </label>
                         </div>
-                    </div>
-                </div>
-                <div class="create-item info">
-                    <div class="info__i">
-                        <label class="info__lbl row__lbl" for="certificateSenderEmail">
-                            От кого:
-                        </label>
-                        <div class="rows">
-                            <div class="row">
-                                <input name="certificate[sender_email]" id="certificateSenderEmail" placeholder="E-mail"
-                                       value="" class="form__input email" type="email">
-                            </div>
-                            <div class="row">
-                                <input name="certificate[sender_name]" id="certificateSenderName" placeholder="Имя отправителя"
-                                       value="" class="form__input" type="text">
-                            </div>
+                        <div class="row row_button">
+                            <button type="submit" name="action" class="btn-invert btn" value="create">Оплатить</button>
                         </div>
+                        <a class="back-link" href="#">Вернуться в магазин</a>
                     </div>
-                    <div class="info__i">
-                        <label class="info__lbl row__lbl" for="certificateRecipientEmail">
-                            Кому:
-                        </label>
-                        <div class="rows">
-                            <div class="row">
-                                <input name="certificate[recipient_email]" id="certificateRecipientEmail" placeholder="E-mail"
-                                       type="email" class="form__input email" value="">
-                            </div>
-                            <div class="row">
-                                <input name="certificate[recipient_name]" id="certificateRecipientName" type="text"
-                                       placeholder="Имя получателя" class="form__input" value="">
-                            </div>
-                            <div class="row">
-                                <input name="certificate[recipient_telephone]" id="certificateRecipientTelephone"
-                                       placeholder="Телефон" type="tel" class="form__input" value="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
 
-                <div class="create-item details">
-                    <p class="details__header">
-                        Когда отправлять?
-                    </p>
-                    <div class="details__items">
-                        <div class="row details__row">
-                            <input id="certificateSendAfterPayment" name="certificate[send_method]"
-                                   class="js-certificate-choose-time radio radio_time" value="after_payment" checked type="radio">
-                            <label class="details__lbl" for="certificateSendAfterPayment">Сразу после оплаты</label>
-                        </div>
-                        <div class="row details__row">
-                            <input id="certificateSendInTime" name="certificate[send_method]"
-                                   class="js-certificate-choose-time radio radio_time" value="after_date" type="radio">
-                            <label class="details__lbl" for="certificateSendInTime">В выбранное время (московское)</label>
-                        </div>
-                    </div>
-                    <div class="calendar" id="certificateCalendar" >
-                        <div id="datetimepicker"></div>
-                        <input type="hidden" name="certificate[date_send]" value="" id="date_send">
-                    </div>
-                </div>
-
-                <div class="create-item finish">
-                    <div class="row">
-                        <input name="is_accept" value="1" class="checkbox input_checkbox checkbox_finish" id="certificateAgreement" type="checkbox">
-                        <label for="certificateAgreement">
-                            Я согласен с <a href="#" target="_blank">"Условиями покупки подарочного сертификата"</a>
-                        </label>
-                    </div>
-                    <div class="row row_button">
-                        <button type="submit" name="action" class="btn-invert btn" value="create">Оплатить</button>
-                    </div>
-                    <a class="back-link" href="#">Вернуться в магазин</a>
-                </div>
-            </form>
-
+            </div>
         </div>
     </div>
-</div>
-<footer class="footer">
+    <footer class="footer">
     <div class="footer__i">
         <ul class="footer__list">
             <li class="footer__item footer__item_tel">
@@ -171,6 +172,7 @@
         </ul>
     </div>
 </footer>
+</div>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/select2.min.js"></script>

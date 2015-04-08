@@ -44,9 +44,15 @@ div.error {
     position: absolute;
     margin-bottom: 5px;
 }
+.wr{
+    &:extend(.container);
+    background: #fff;
+    min-height: 100%;
+    overflow: hidden;
+}
 .header{
     position: relative;
-    &:extend(.container);
+//    &:extend(.container);
     text-align: center;
     background: #fff;
     &__logo{
@@ -85,7 +91,7 @@ div.error {
 }
 .page{
     background: #fff;
-    &:extend(.container);
+//    &:extend(.container);
     &__i{
         max-width: 662px;
         margin: 0 auto;
@@ -101,7 +107,7 @@ div.error {
         font-size: 24/16em;
         font-weight: bold;
         font-family: Times New Roman;
-        color: #525252;
+        color: #a6a6a6;
         &_active{
             color: #000;
         }
@@ -331,11 +337,6 @@ div.error {
 .login-form{
     text-align: center;
     padding-top: 27px;
-    button{
-        font-size: 1em;
-        font-family: "Times New Roman";
-        font-weight: bold;
-    }
 }
 .form{
     .clearfix;
@@ -343,7 +344,7 @@ div.error {
         margin-bottom: 20px;
         &_remember{
             text-align: left;
-            margin: 24px 0 20px 0;
+            margin: 24px 0 17px 0;
             position: relative;
         }
     }
@@ -356,7 +357,8 @@ div.error {
         font-size: 14/16em;
         font-weight: normal;
         font-family: Arial;
-        color: #b0b0b0;
+        color: #a6a6a6;
+        letter-spacing: -0.1px;
         box-shadow: none;
         &_code{
             width: 111/246*100%;
@@ -372,7 +374,7 @@ div.error {
     &__label{
         font-size: 14/16em;
         font-weight: normal;
-        letter-spacing: .5px;
+        letter-spacing: .1px;
         color: #000;
         font-family: Arial;
     }
@@ -469,10 +471,10 @@ div.error {
     cursor: pointer;
     background: #000;
     border: 1px solid #000;
-    font-size: 0.95em;
+    font-size: 1em;
     font-family: "Times New Roman";
     font-weight: bold;
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
 }
 .btn-invert_full-width{
     width: 100%;
@@ -489,7 +491,7 @@ div.error {
 }
 .btn-require{
     font-size: 18/16em;
-    padding: 13px 30px;
+    padding: 13px 33px;
     margin: 0 20px;
 }
 .advantage{
@@ -529,7 +531,7 @@ div.error {
     display: none;
 }
 .footer{
-    &:extend(.container);
+//    &:extend(.container);
     text-align: center;
     background: #fff;
     &__i{
@@ -681,7 +683,8 @@ div.error {
         letter-spacing: -0.5px;
     }
     .btn{
-        font-size: 16/16em;
+        font-size: 18/16em;
+        padding: 13px 33px;
     }
     .error {
         text-align: left;
@@ -865,6 +868,9 @@ div.error {
 @media only screen and (max-width: 1023px){
     .header__link{
         right: 0;
+    }
+    .nav-finished .nav__item-arrow{
+        margin: 0 20px 0 20px;
     }
 }
 @media only screen and (max-width: 860px){

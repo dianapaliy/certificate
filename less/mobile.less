@@ -22,7 +22,7 @@
             display: none;
         }
         &__i{
-            padding: 33px 0 17px;
+            padding: 33px 0 19px;
         }
     }
     .page{
@@ -55,7 +55,7 @@
             &:extend(.wrapper);
         }
         &__title_require{
-            margin: 2px auto 20px;
+            margin: 0px auto 20px;
             max-width: 100%;
         }
         &__order-info{
@@ -103,6 +103,7 @@
             float: left;
             border-radius: 7px;
             margin-bottom: 28px;
+            background: #7a7a7a;
         }
         &__session-text{
             color: #fff;
@@ -125,7 +126,7 @@
         &_finished{
             max-width: 87%;
             text-align: center;
-            padding: 100px 0 102px 0;
+            padding: 98px 0 102px 0;
         }
         &__title{
             width: 74%;
@@ -177,16 +178,16 @@
         &__input {
             padding: 7px 11px;
             letter-spacing: -0.3px;
-            &_min{
-                width: 58/140*100%;
-                float: left;
-//                display: inline-block;
-//                margin: 0 23/281*100% 0 0;
-                &:last-child{
-                    margin: 0;
-                    float: right;
-                }
-            }
+//            &_min{
+//                width: 58/140*100%;
+//                float: left;
+////                display: inline-block;
+////                margin: 0 23/281*100% 0 0;
+//                &:last-child{
+//                    margin: 0;
+//                    float: right;
+//                }
+//            }
             &_time{
                 width: 140/281*100%;
                 float: right;
@@ -202,6 +203,9 @@
             min-height: 120px;
             max-height: 120px;
         }
+        &__row_remember{
+            margin: 20px 0 19px 0;
+        }
         //-------------3page-------------//
         &__title{
             text-align: left;
@@ -209,6 +213,7 @@
         }
         &__view{
             width: 100%;
+            height: auto;
             padding: 0;
             border: none;
             border-radius: 0;
@@ -227,6 +232,7 @@
         float: none;
         width: 100%;
         margin-top: 36px;
+        margin-bottom: 42px;
         &:extend(.wrapper);
     }
     .back-link{
@@ -303,6 +309,9 @@
                 &:last-child{
                     margin: 0;
                 }
+                span{
+                    margin-right: 0;
+                }
             }
         }
         &__title {
@@ -326,16 +335,17 @@
     }
     .create-item{
         .clearfix;
-        padding-bottom: 28px;
+        padding-bottom: 30px;
         position: relative;
         margin: 0 auto;
         border-bottom: none;
         &:extend(.wrapper);
         &:last-child{
             border: none;
-            margin: 41px auto 0;
+            margin: 37px auto 0;
         }
     }
+
     .info{
         padding-bottom: 22px;
         .clearfix;
@@ -366,9 +376,10 @@
                 letter-spacing: -0.5px;
             }
         }
+
     }
     .details{
-        padding-bottom: 24px;
+        padding-bottom: 28px;
         &__header {
             font-size: 15/16em;
             text-align: left;
@@ -386,11 +397,11 @@
             &:last-child {
                 margin: 0 0 0 27px;
                 input {
-                    left: 0;
+//                    left: 0;
                 }
             }
             input {
-                left:0;
+//                left:0;
             }
         }
         &:after {
@@ -411,6 +422,10 @@
             letter-spacing: -0.5px;
             line-height: 1.5em;
             display: block;
+        }
+        .btn{
+            font-size: 1em;
+            padding: 9px 33px;
         }
 
     }
@@ -480,19 +495,14 @@
                 font-size: 14/16em;
                 font-weight: normal;
                 font-family: Arial;
-                margin-right: 0;
+                margin-right: 25/281*100%;
                 float: left;
                 margin-top: 8px;
             }
         }
         &_time{
             span{
-                font-size: 14/16em;
-                font-weight: normal;
-                font-family: Arial;
                 float: left;
-                margin-top: 8px;
-                margin-right: 0;
             }
         }
         p{
@@ -501,9 +511,17 @@
             font-family: Arial;
             color: #a6a6a6;
         }
+        &_min{
+            width: 58/140*100%;
+            float: left;
+            &:last-child{
+                margin: 0;
+                float: right;
+            }
+        }
     }
+
     .select-wr{
-//        width: 65% !important;
         width: 82% !important;
         display: inline-block;
     }

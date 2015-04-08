@@ -7,97 +7,100 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 <body>
-<header class="header">
-    <div class="header__i">
-        <a href="#">
-            <img class="header__logo" src="images/header_logo.png" alt=""/>
-            <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
-        </a>
-        <a class="header__link" href="#">Вернуться в магазин</a>
-    </div>
-</header>
-<div class="page">
-    <div class="page__i">
-        <div class="nav-wr">
-            <ul class="nav">
-                <li class="nav__item nav__item_active"><span>Авторизация</span></li>
-                <li class="nav__item nav__item-arrow nav__item-arrow_before"><span></span></li>
-                <li class="nav__item"><span>Оплата</span></li>
-                <li class="nav__item nav__item-arrow nav__item-arrow_after"><span></span></li>
-                <li class="nav__item"><span>Подтверждение</span></li>
-            </ul>
+<div class="wr">
+    <header class="header">
+        <div class="header__i">
+            <a href="#">
+                <img class="header__logo" src="images/header_logo.png" alt=""/>
+                <img class="header__logo_mob" src="images/header_logo-mobile.png" alt=""/>
+            </a>
+            <a class="header__link" href="#">Вернуться в магазин</a>
         </div>
-        <div class="content">
-            <div class="login">
-                <span class="login__title">Войти</span>
-                <span class="login__title_mob">Оплата</span>
-                <ul class="login__social">
-                    <li class="login__item"><a class="login__link login__link_fb" href="#"><!-- --></a></li><!--
+    </header>
+    <div class="page">
+        <div class="page__i">
+            <div class="nav-wr">
+                <ul class="nav">
+                    <li class="nav__item nav__item_active"><span>Авторизация</span></li>
+                    <li class="nav__item nav__item-arrow nav__item-arrow_before"><span></span></li>
+                    <li class="nav__item"><span>Оплата</span></li>
+                    <li class="nav__item nav__item-arrow nav__item-arrow_after"><span></span></li>
+                    <li class="nav__item"><span>Подтверждение</span></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="login">
+                    <span class="login__title">Войти</span>
+                    <span class="login__title_mob">Оплата</span>
+                    <ul class="login__social">
+                        <li class="login__item"><a class="login__link login__link_fb" href="#"><!-- --></a></li><!--
                     --><li class="login__item"><a class="login__link login__link_twitter" href="#"><!-- --></a></li><!--
                     --><li class="login__item"><a class="login__link login__link_vk" href="#"><!-- --></a></li><!--
                     --><li class="login__item"><a class="login__link login__link_insta" href="#"><!-- --></a></li><!--
                     --><li class="login__item"><a class="login__link login__link_google" href="#"><!-- --></a></li>
-                </ul>
-                <span class="login__divider"><span>или</span></span>
-                <form class="form login-form" id="loginForm" action="">
-                    <div class="form__row">
-                        <input class="form__input" type="text" name="login[username]" placeholder="Ваш e-mail"/>
-                    </div>
-                    <div class="form__row">
-                        <input class="form__input" type="password" name="login[password]" placeholder="Пароль"/>
-                    </div>
+                    </ul>
+                    <span class="login__divider"><span>или</span></span>
+                    <form class="form login-form" id="loginForm" action="">
+                        <div class="form__row">
+                            <input class="form__input" type="text" name="login[username]" placeholder="Ваш E-mail"/>
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input" type="password" name="login[password]" placeholder="Пароль"/>
+                        </div>
 
-                    <div class="form__row form__row_remember">
-                        <input type="checkbox" id="remember_me_certificate" name="persistent_remember_me" class="checkbox input_checkbox"
-                               title="Запомнить меня" />
-                        <label class="form__label" for="remember_me_certificate">Запомнить меня</label>
-                    </div>
+                        <div class="form__row form__row_remember">
+                            <input type="checkbox" id="remember_me_certificate" name="persistent_remember_me" class="checkbox input_checkbox"
+                                   title="Запомнить меня" />
+                            <label class="form__label" for="remember_me_certificate">Запомнить меня</label>
+                        </div>
 
-                    <button type="submit" class="btn-invert btn-invert_full-width disabled" name="send">
-                        Войти
-                    </button>
-                </form>
+                        <button type="submit" class="btn-invert btn-invert_full-width disabled" name="send">
+                            Войти
+                        </button>
+                    </form>
+                </div>
+                <div class="advantage">
+                    <p class="advantage__header">
+                        Нет аккаунта?
+                    </p>
+                    <ul class="advantage__list hide-on-mobile">
+                        <li class="advantage__item">
+                            Уведомления о новых продуктах
+                        </li>
+                        <li class="advantage__item">
+                            История заказов, списки избранного
+                        </li>
+                        <li class="advantage__item">
+                            Ускоренное оформление заказов
+                        </li>
+                        <li class="advantage__item">
+                            Спецпредложения и многое другое
+                        </li>
+                    </ul>
+                    <a class="btn-invert btn-invert_full-width" href="#">Зарегистрироваться</a>
+                </div>
             </div>
-            <div class="advantage">
-                <p class="advantage__header">
-                    Нет аккаунта?
-                </p>
-                <ul class="advantage__list hide-on-mobile">
-                    <li class="advantage__item">
-                        Уведомления о новых продуктах
-                    </li>
-                    <li class="advantage__item">
-                        История заказов, списки избранного
-                    </li>
-                    <li class="advantage__item">
-                        Ускоренное оформление заказов
-                    </li>
-                    <li class="advantage__item">
-                        Спецпредложения и многое другое
-                    </li>
-                </ul>
-                <a class="btn-invert btn-invert_full-width" href="#">Зарегистрироваться</a>
-            </div>
+            <a class="back-link" href="#">Вернуться в магазин</a>
         </div>
-        <a class="back-link" href="#">Вернуться в магазин</a>
     </div>
-</div>
-<footer class="footer">
-    <div class="footer__i">
-        <ul class="footer__list">
-            <li class="footer__item footer__item_tel">
-                <a href="tel:8 800 500 16 57">
-                    8 800 500 16 57
-                </a>
-            </li><!--
+    <footer class="footer">
+        <div class="footer__i">
+            <ul class="footer__list">
+                <li class="footer__item footer__item_tel">
+                    <a href="tel:8 800 500 16 57">
+                        8 800 500 16 57
+                    </a>
+                </li><!--
             --><li class="footer__item footer__item_info">
                 <a href="#">
                     Правовая информация
                 </a>
             </li>
-        </ul>
-    </div>
-</footer>
+            </ul>
+        </div>
+    </footer>
+</div>
+
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
