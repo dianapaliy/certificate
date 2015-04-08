@@ -9,6 +9,7 @@ jQuery(function ($) {
         init: function() {
             this.initializeCalendar();
             this.showCalendar();
+            this.validation();
         },
         showCalendar: function() {
             var $$chooseTimeControls = $('.js-certificate-choose-time'),
@@ -86,6 +87,11 @@ jQuery(function ($) {
                     }
                 }
             });
+        },
+        validation: function() {
+            var $form = $('#certificate');
+            window.initializeFormValidation('certificate');
+            $('#certificateRecipientTelephone').mask("+7 (999) 999-99-99");
         }
     };
 

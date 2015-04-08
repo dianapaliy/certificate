@@ -275,6 +275,18 @@ jQuery(document).ready(function ($) {
                 },
                 'is_accept': {
                     required: requiredFieldStr
+                },
+                'numberCard': {
+                    required: requiredFieldStr
+                },
+                'nameOwner': {
+                    required: requiredFieldStr
+                },
+                'mm': {
+                    required: requiredFieldStr
+                },
+                'yy': {
+                    required: requiredFieldStr
                 }
             },
             rules: {
@@ -394,6 +406,18 @@ jQuery(document).ready(function ($) {
                     required: true
                 },
                 is_accept: {
+                    required: true
+                },
+                'numberCard': {
+                    required: true
+                },
+                'nameOwner': {
+                    required: true
+                },
+                'mm': {
+                    required: true
+                },
+                'yy': {
                     required: true
                 }
             },

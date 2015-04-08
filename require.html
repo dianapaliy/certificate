@@ -19,12 +19,12 @@
 <div class="page">
     <div class="page__i">
         <div class="nav-wr">
-            <ul class="nav">
-                <li class="nav__item nav__item_active"><span>Авторизация</span></li>
+            <ul class="nav nav-require">
+                <li class="nav__item nav__item_checked"><span>Авторизация</span></li>
                 <li class="nav__item nav__item-arrow nav__item-arrow_before"><span></span></li>
-                <li class="nav__item"><span>Оплата</span></li>
+                <li class="nav__item nav__item_checked"><span>Оплата</span></li>
                 <li class="nav__item nav__item-arrow nav__item-arrow_after"><span></span></li>
-                <li class="nav__item"><span>Подтверждение</span></li>
+                <li class="nav__item nav__item_active"><span>Подтверждение</span></li>
             </ul>
         </div>
         <div class="content content_require">
@@ -52,7 +52,7 @@
                 <div class="form__view form__view_front">
                     <div class="row row_require-mob">
                         <input name="numberCard" id="numberCard" placeholder="Номер карты"
-                               value="" class="form__input number-card" type="text">
+                               value="" class="form__input number-card numeric" type="text" maxlength="19">
                     </div>
                     <div class="row">
                         <input name="nameOwner" id="nameOwner" placeholder="Имя и фамилия держателя"
@@ -61,10 +61,14 @@
                     <div class="row row_last row_time">
                         <span class="row__span">Срок действия</span>
                         <div class="form__input_time">
-                            <input name="mm" id="mm" placeholder="мм"
-                                   value="" class="form__input form__input_min" type="text">
-                            <input name="yy" id="yy" placeholder="гг"
-                                   value="" class="form__input form__input_min" type="text">
+                            <div class="row_min">
+                                <input name="mm" id="mm" placeholder="мм"
+                                       value="" class="form__input form__input_min" type="text">
+                            </div>
+                            <div class="row_min">
+                                <input name="yy" id="yy" placeholder="гг"
+                                       value="" class="form__input form__input_min" type="text">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,7 +77,7 @@
                     <div class="row row_code">
                         <span class="row__span">Код CVC2/CVV2</span>
                         <input name="code" id="code" placeholder="Код"
-                               value="" class="form__input form__input_code" type="text">
+                               value="" class="form__input form__input_code numeric" type="text" maxlength="3">
                     </div>
                     <div class="row row_last">
                         <p>
@@ -114,6 +118,9 @@
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/validation.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/require.js"></script>
 </body>
 </html>

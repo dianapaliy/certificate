@@ -449,15 +449,18 @@ a {
   text-decoration: none;
   color: #000;
 }
+input {
+  position: relative;
+}
 body {
   background: url("../images/bg.png") repeat;
 }
-.error {
+div.error {
   font-size: 0.6875em;
   color: #e71c25;
   font-family: Arial;
   text-transform: lowercase;
-  position: relative;
+  position: absolute;
   margin-bottom: 5px;
 }
 .header {
@@ -560,6 +563,24 @@ body {
 .nav-wr {
   text-align: center;
 }
+.nav-payment {
+  padding: 30px 0 50px 0;
+}
+.nav-payment .nav__item-arrow {
+  margin: 0 30px 0 41px;
+}
+.nav-require {
+  padding: 29px 0 50px 0;
+}
+.nav-require .nav__item-arrow {
+  margin: 0 26px 0 34px;
+}
+.nav-finished {
+  padding: 27px 0 50px 5%;
+}
+.nav-finished .nav__item-arrow {
+  margin: 0 26px 0 34px;
+}
 .content {
   max-width: 658px;
   margin: 0 auto;
@@ -580,7 +601,7 @@ body {
 }
 .content_finished {
   text-align: center;
-  padding: 110px 0 277px 9%;
+  padding: 113px 0 277px 9%;
 }
 .content__title {
   font-size: 1.5em;
@@ -776,14 +797,6 @@ body {
   font-family: Arial;
   color: #b0b0b0;
   box-shadow: none;
-}
-.form__input_min {
-  width: 45%;
-  float: left;
-}
-.form__input_min:last-child {
-  margin: 0;
-  float: right;
 }
 .form__input_code {
   width: 45.12195122%;
@@ -1012,7 +1025,7 @@ body {
   margin-right: 3%;
 }
 .create__content .row {
-  margin-bottom: 14px;
+  margin-bottom: 29px;
 }
 .create__content .row:last-child {
   margin-bottom: 0;
@@ -1024,7 +1037,7 @@ body {
   font-family: "Times New Roman";
   font-weight: bold;
   line-height: 1.4em;
-  margin: -3px 0 13px;
+  margin: -3px 0 30px;
 }
 .create__about {
   display: none;
@@ -1124,9 +1137,6 @@ body {
 .details__row:last-child {
   margin: 0 0 0 97px;
 }
-.details__row:last-child input {
-  left: 245px;
-}
 .details__row input {
   vertical-align: middle;
   width: 20px;
@@ -1134,7 +1144,7 @@ body {
   position: absolute;
   cursor: pointer;
   font-size: 100%;
-  left: 15px;
+  left: -30px;
   z-index: 2;
 }
 .finish {
@@ -1169,6 +1179,7 @@ body {
 .row {
   *zoom: 1;
   margin-bottom: 20px;
+  position: relative;
 }
 .row:before,
 .row:after {
@@ -1227,6 +1238,15 @@ body {
   font-weight: normal;
   font-family: Arial;
   color: #a6a6a6;
+}
+.row_min {
+  width: 45%;
+  float: left;
+  position: relative;
+}
+.row_min:last-child {
+  margin: 0;
+  float: right;
 }
 .select-wr {
   width: 63% !important;

@@ -6,7 +6,6 @@ jQuery(function ($) {
     require = {
         init: function() {
             this.clearForm();
-            this.validation();
         },
         clearForm: function() {
             var
@@ -17,11 +16,6 @@ jQuery(function ($) {
 
                 $('#require')[0].reset();
             });
-        },
-        validation: function() {
-            var $form = $('#certificate');
-            window.initializeFormValidation('certificate');
-            $('#certificateRecipientTelephone').mask("+7 (999) 999-99-99");
         }
     };
 

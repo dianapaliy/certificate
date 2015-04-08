@@ -30,15 +30,18 @@ a {
     text-decoration: none;
     color: #000;
 }
+input{
+    position: relative;
+}
 body{
     background: url("../images/bg.png") repeat;
 }
-.error {
+div.error {
     font-size: 11/16em;
     color: #e71c25;
     font-family: Arial;
     text-transform: lowercase;
-    position: relative;
+    position: absolute;
     margin-bottom: 5px;
 }
 .header{
@@ -135,6 +138,24 @@ body{
 .nav-wr{
     text-align: center;
 }
+.nav-payment{
+    padding: 30px 0 50px 0;
+    .nav__item-arrow{
+        margin: 0 30px 0 41px;
+    }
+}
+.nav-require{
+    padding: 29px 0 50px 0;
+    .nav__item-arrow{
+        margin: 0 26px 0 34px;
+    }
+}
+.nav-finished{
+    padding: 27px 0 50px 5%;
+    .nav__item-arrow{
+        margin: 0 26px 0 34px;
+    }
+}
 .content{
     max-width: 658px;
     margin: 0 auto;
@@ -146,7 +167,7 @@ body{
     //-----------4page--------------------//
     &_finished{
         text-align: center;
-        padding: 110px 0 277px 9%;
+        padding: 113px 0 277px 9%;
     }
     &__title{
         font-size: 24/16em;
@@ -337,14 +358,6 @@ body{
         font-family: Arial;
         color: #b0b0b0;
         box-shadow: none;
-        &_min {
-            width: 63/140*100%;
-            float: left;
-            &:last-child {
-                margin: 0;
-                float: right;
-            }
-        }
         &_code{
             width: 111/246*100%;
             display: inline-block;
@@ -468,10 +481,6 @@ body{
     color: #000;
     background: #fff;
 }
-//.notActive{
-//    color: #000;
-//    background: #fff;
-//}
 .btn-block{
     float: left;
     width: 100%;
@@ -565,12 +574,9 @@ body{
         float: right;
         margin-right: 3%;
         .row{
-            margin-bottom: 14px;
+            margin-bottom: 29px;
             &:last-child{
                 margin-bottom: 0;
-//                .error {
-//                    margin-bottom: -1.6rem;
-//                }
             }
         }
     }
@@ -581,7 +587,7 @@ body{
         font-family: "Times New Roman";
         font-weight: bold;
         line-height: 1.4em;
-        margin: -3px 0 13px;
+        margin: -3px 0 30px;
     }
     &__about{
         display: none;
@@ -654,9 +660,6 @@ body{
         .clearfix;
         &:last-child {
             margin: 0 0 0 97px;
-            input {
-                left: 245px;
-            }
         }
         input {
             vertical-align: middle;
@@ -665,7 +668,7 @@ body{
             position: absolute;
             cursor: pointer;
             font-size: 100%;
-            left: 15px;
+            left: -30px;
             z-index: 2;
         }
     }
@@ -703,6 +706,7 @@ body{
 .row{
     .clearfix;
     margin-bottom: 20px;
+    position: relative;
     &__lbl {
         font-size: 16/16em;
         font-family: Arial;
@@ -753,6 +757,15 @@ body{
         font-weight: normal;
         font-family: Arial;
         color: #a6a6a6;
+    }
+    &_min {
+        width: 63/140*100%;
+        float: left;
+        position: relative;
+        &:last-child {
+            margin: 0;
+            float: right;
+        }
     }
 }
 .select-wr{
