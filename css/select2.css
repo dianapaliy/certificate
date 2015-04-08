@@ -17,6 +17,7 @@
       display: block;
       overflow: hidden;
       text-overflow: ellipsis;
+      padding: 7px 0;
       white-space: nowrap; }
   .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
     padding-right: 8px;
@@ -158,7 +159,7 @@
     position: relative;
     display: block;
     overflow: hidden;
-    padding: 7px 10px;
+    padding: 0 10px;
     background: #fff;
     border: 1px solid #ccc;
     color: #000;
@@ -260,3 +261,12 @@
   cursor: default;
   display: block;
   padding: 6px; }
+
+@media only screen and (max-width: 767px){
+    .select2-container .select2-selection--single .select2-selection__rendered{
+        padding: 7px 0;
+    }
+    .select2-container--default .select2-selection--single{
+        padding: 0 10px;
+    }
+}

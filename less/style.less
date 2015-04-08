@@ -360,10 +360,10 @@ div.error {
         color: #a6a6a6;
         letter-spacing: -0.1px;
         box-shadow: none;
-        &_code{
-            width: 111/246*100%;
-            display: inline-block;
-        }
+//        &_code{
+//            width: 111/246*100%;
+//            display: inline-block;
+//        }
         &_time{
             width: 140/246*100%;
             float: right;
@@ -454,6 +454,8 @@ div.error {
 }
 .checkbox_finish{
     left: 17.5%;
+//    padding: 0 !important;
+//    top: 24px !important;
 }
 .btn-invert{
     margin: 0 0 20px 0;
@@ -744,6 +746,10 @@ div.error {
             font-family: Arial;
             margin-right: 17px;
         }
+        .row{
+            width: 111/246*100%;
+            display: inline-block;
+        }
     }
     &_time{
         span{
@@ -840,6 +846,7 @@ div.error {
     padding: 30px 30px 24px;
     border: 1px solid #000;
     position: relative;
+    z-index: 1;
     &:before,
     &:after{
         bottom: 100%;
@@ -850,7 +857,6 @@ div.error {
         height: 0;
         width: 0;
         position: absolute;
-        pointer-events: none;
     }
     &:before {
         border-bottom-color: #000;
@@ -879,5 +885,22 @@ div.error {
     }
     .row p{
         font-size: 0.65em;
+    }
+    .row__lbl{
+        margin-right: 4%;
+    }
+    .row_code span{
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width: 481px){
+    .checkbox_finish{
+            padding: 0 !important;
+            top: 24px !important;
+    }
+    .finish{
+        label{
+            padding-top: 20px;
+        }
     }
 }

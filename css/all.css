@@ -797,10 +797,6 @@ div.error {
   letter-spacing: -0.1px;
   box-shadow: none;
 }
-.form__input_code {
-  width: 45.12195122%;
-  display: inline-block;
-}
 .form__input_time {
   width: 56.91056911%;
   float: right;
@@ -1225,6 +1221,10 @@ div.error {
   font-family: Arial;
   margin-right: 17px;
 }
+.row_code .row {
+  width: 45.12195122%;
+  display: inline-block;
+}
 .row_time span {
   font-size: 0.875em;
   font-weight: normal;
@@ -1312,6 +1312,7 @@ div.error {
   padding: 30px 30px 24px;
   border: 1px solid #000;
   position: relative;
+  z-index: 1;
 }
 .calendar:before,
 .calendar:after {
@@ -1322,7 +1323,6 @@ div.error {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
 }
 .calendar:before {
   border-bottom-color: #000;
@@ -1348,6 +1348,21 @@ div.error {
   }
   .row p {
     font-size: 0.65em;
+  }
+  .row__lbl {
+    margin-right: 4%;
+  }
+  .row_code span {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 481px) {
+  .checkbox_finish {
+    padding: 0 !important;
+    top: 24px !important;
+  }
+  .finish label {
+    padding-top: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1558,10 +1573,6 @@ div.error {
   .form__input_time:after {
     clear: both;
   }
-  .form__input_code {
-    width: 49.82206406%;
-    float: right;
-  }
   .form__textarea {
     min-height: 120px;
     max-height: 120px;
@@ -1717,7 +1728,7 @@ div.error {
   }
   .create-item:last-child {
     border: none;
-    margin: 37px auto 0;
+    margin: 40px auto 0;
   }
   .info {
     padding-bottom: 22px;
@@ -1867,7 +1878,7 @@ div.error {
     font-size: 1em;
     font-family: Arial;
     font-weight: bold;
-    margin-right: 4.5%;
+    margin-right: 3%;
   }
   .row_button {
     margin: 62px 0 58px;
@@ -1908,6 +1919,10 @@ div.error {
     margin-right: 8.89679715%;
     float: left;
     margin-top: 8px;
+  }
+  .row_code .row {
+    width: 49.82206406%;
+    float: right;
   }
   .row_time span {
     float: left;
@@ -1970,8 +1985,14 @@ div.error {
   }
 }
 @media only screen and (max-width: 370px) {
+  .create-item:last-child {
+    margin: 15px auto 0;
+  }
   .select-wr {
     width: 65% !important;
     display: inline-block;
+  }
+  .row__lbl {
+    margin-right: 4.5%;
   }
 }
