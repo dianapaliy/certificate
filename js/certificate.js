@@ -1,31 +1,34 @@
-/*global $:false, jQuery:false */
 jQuery(function ($) {
     "use strict";
-    var certificate;
     window.currentDate = 1;
     window.fullMinutesSlider = 0;
 
-    certificate = {
+    var certificate = {
         init: function() {
+            this.prepareDateTimePicker();
             this.initializeCalendar();
+            this.initializeUpdater();
             this.showCalendar();
             this.validation();
         },
         showCalendar: function() {
-            var $$chooseTimeControls = $('.js-certificate-choose-time'),
+            var $chooseTimeControls = $('.js-certificate-choose-time'),
                 $chooseInTimeControl = $('#certificateSendInTime'),
                 $calendar = $('#certificateCalendar');
 
-            $$chooseTimeControls.on('change', function() {
+            $chooseTimeControls.on('change', function() {
                 if ($chooseInTimeControl.prop('checked')) {
                     $calendar.show();
                 } else {
                     $calendar.hide();
                 }
             });
+
+            if ($chooseInTimeControl.prop('checked')) {
+                $calendar.show();
+            }
         },
-        initializeCalendar: function() {
-            var $calendar = $('#datetimepicker');
+        prepareDateTimePicker: function () {
             $.datepicker.regional['ru'] = {
                 closeText: 'Закрыть',
                 prevText: 'Назад',
@@ -47,12 +50,12 @@ jQuery(function ($) {
 
             $.timepicker.regional['ru'] = {
                 timeOnlyTitle: 'Выберите время',
-                timeText: 'Время',
-                hourText: 'Часы',
-                minuteText: 'Минуты',
-                secondText: 'Секунды',
-                millisecText: 'Миллисекунды',
-                timezoneText: 'Часовой пояс',
+                timeText: 'Время:',
+                hourText: 'Часы:',
+                minuteText: 'Минуты:',
+                secondText: 'Секунды:',
+                millisecText: 'Миллисекунды:',
+                timezoneText: 'Часовой пояс:',
                 currentText: 'Сейчас',
                 closeText: 'Закрыть',
                 timeFormat: 'HH:mm',
@@ -61,14 +64,21 @@ jQuery(function ($) {
                 isRTL: false
             };
             $.timepicker.setDefaults($.timepicker.regional['ru']);
-            var date = new Date();
+        },
+        initializeCalendar: function(current) {
+            var $calendar = $('#datetimepicker'),
+                date = new Date();
+
+            current = current || date;
+
+            $calendar.datetimepicker('destroy');
             $calendar.datetimepicker({
                 showButtonPanel: false,
-                minDateTime: date,
                 altFieldTimeOnly: false,
                 altFormat: 'yy-mm-dd',
                 altTimeFormat: 'HH:mm',
                 altField: '#date_send',
+                minDateTime: date,
                 onSelect: function(dateText) {
                     var dates = dateText.split(' ')[0].split('.'),
                         currentDay = dates[0],
@@ -78,15 +88,26 @@ jQuery(function ($) {
                     if ((date.getDate() == +currentDay) && (date.getMonth() + 1 == +currentMonth) && (date.getFullYear() == +currentYear)) {
                         $calendar.removeClass('not-current-date');
                         window.currentDate = 1;
-                    } else {
-                        if (window.currentDate) {
-                            window.currentDate = 0;
-                            $calendar.addClass('not-current-date');
-                        }
-
+                    } else if (window.currentDate) {
+                        window.currentDate = 0;
+                        $calendar.addClass('not-current-date');
                     }
                 }
             });
+
+            $calendar.datetimepicker('setDate', current);
+        },
+        initializeUpdater: function () {
+            var that = this,
+                $calendar = $('#datetimepicker');
+
+            setInterval(function() {
+                var current = $calendar.datepicker('getDate');
+                if (current < new Date()) {
+                    current = new Date();
+                }
+                that.initializeCalendar(current);
+            }, 1000 * 60); //per minute
         },
         validation: function() {
             var $form = $('#certificate');
@@ -95,8 +116,7 @@ jQuery(function ($) {
         }
     };
 
-    $(document).ready(function() {
+    $(function() {
         certificate.init();
-    });
-
+    })
 });
