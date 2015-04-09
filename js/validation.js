@@ -142,12 +142,15 @@ jQuery(document).ready(function ($) {
             $phone.on('focusin', onFocusPhone);
         }
 
-        var requiredFieldStr = "error",
-            requiredCheckboxStr = "error",
-            emailStr = "error",
-            moreCharStr = "error",
-            moreCharStr50 = "error",
-            equalTo = "error",
+        var requiredFieldStr = "Обязательно",
+            requiredCheckboxStr = "Обязательно",
+            emailStr = "Введите почту",
+            moreCharStr = "Введите больше символов",
+            moreCharStr50 = "Введи больше символов",
+            equalTo = "Не соответствует",
+            maxValue = "Max = 12",
+            minSigns = "min 2 signs",
+            minSigns3 = "min 3 signs",
             messageStr = "error";
 
         $form.validate({
@@ -206,7 +209,8 @@ jQuery(document).ready(function ($) {
                     required: requiredFieldStr
                 },
                 code: {
-                    required: requiredFieldStr
+                    required: requiredFieldStr,
+                    minlength: minSigns3
                 },
                 title: {
                     required: requiredFieldStr
@@ -283,10 +287,13 @@ jQuery(document).ready(function ($) {
                     required: requiredFieldStr
                 },
                 'mm': {
-                    required: requiredFieldStr
+                    required: requiredFieldStr,
+                    max: maxValue,
+                    minlength: minSigns
                 },
                 'yy': {
-                    required: requiredFieldStr
+                    required: requiredFieldStr,
+                    minlength: minSigns
                 }
             },
             rules: {
@@ -346,7 +353,8 @@ jQuery(document).ready(function ($) {
                     required: true
                 },
                 code: {
-                    required: true
+                    required: true,
+                    minlength: "3"
                 },
                 age: {
                     required: true
@@ -415,10 +423,13 @@ jQuery(document).ready(function ($) {
                     required: true
                 },
                 'mm': {
-                    required: true
+                    required: true,
+                    max: "12",
+                    minlength: "2"
                 },
                 'yy': {
-                    required: true
+                    required: true,
+                    minlength: "2"
                 }
             },
             invalidHandler: function (ev, validator) {
