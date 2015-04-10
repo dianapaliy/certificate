@@ -6,6 +6,8 @@ jQuery(function ($) {
         init: function() {
             this.validation();
             this.validateCardNumber();
+            this.countdown();
+            this.clearForm();
         },
         validation: function() {
             var $form = $('#require');
@@ -38,6 +40,31 @@ jQuery(function ($) {
 
             });
             //$(".year").mask("yy");
+        },
+        countdown: function() {
+
+            $('#noDaysSeconds').countdown({
+                until: '+15m +00s',
+                onExpiry: liftOff,
+                format: 'MS',
+                padZeroes: true,
+                compact: true,
+                timeSeparator: ':',
+                description: ''
+            });
+            function liftOff() {
+                location.href = "http://192.168.0.39:3000/payment.html";
+            }
+        },
+        clearForm: function() {
+            var
+                $btnClear = $('#clear');
+
+            $btnClear.on('click', function (e) {
+                e.preventDefault();
+
+                $('#require')[0].reset();
+            });
         }
     };
 

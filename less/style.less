@@ -52,7 +52,6 @@ div.error {
 }
 .header{
     position: relative;
-//    &:extend(.container);
     text-align: center;
     background: #fff;
     &__logo{
@@ -91,16 +90,14 @@ div.error {
 }
 .page{
     background: #fff;
-//    &:extend(.container);
     &__i{
         max-width: 662px;
         margin: 0 auto;
-//        text-align: center;
     }
 }
 .nav{
     padding: 30px 0 50px 3%;
-    .clearfix;
+    &:extend(.clearfix all);
     display: inline-block;
     &__item{
         float: left;
@@ -166,12 +163,11 @@ div.error {
     max-width: 658px;
     margin: 0 auto;
     padding: 27px 0 48px;
-    .clearfix;
+    &:extend(.clearfix all);
     &__title_mob{
         display: none;
     }
-    //-----------4page--------------------//
-    &_finished{
+    &-finished{
         text-align: center;
         padding: 113px 0 277px 9%;
     }
@@ -193,10 +189,6 @@ div.error {
         color: #e24c42;
         border-bottom: 1px solid #e24c42;
     }
-    //--------------3page--------------------//
-    &_require{
-        padding-bottom: 67px;
-    }
 
     &__order-info{
         position: relative;
@@ -215,7 +207,7 @@ div.error {
         span{
             font-weight: bold;
         }
-        &_last{
+        &_last {
             padding-bottom: 41px;
         }
     }
@@ -253,7 +245,19 @@ div.error {
         float: right;
         line-height: 0.8em;
     }
-    //---------------------------------//
+    &__item{
+        padding-bottom: 35px;
+        position: relative;
+        margin: 0 0 29px;
+        border-bottom: 2px dotted #ccc;
+        &:last-child{
+            border: none;
+            margin: 0;
+        }
+    }
+}
+.content-require{
+    padding-bottom: 67px;
 }
 .login{
     width: 280/655*100%;
@@ -262,13 +266,9 @@ div.error {
         font-size: 18/16em;
         font-weight: bold;
         font-family: Times New Roman;
-        color: #000;
         margin: 2px 0 40px;
         display: block;
         text-transform: uppercase;
-        &_mob{
-            display: none;
-        }
     }
     &__social{
         text-align: center;
@@ -342,7 +342,7 @@ div.error {
     padding-top: 27px;
 }
 .form{
-    .clearfix;
+    &:extend(.clearfix all);
     &__row{
         margin-bottom: 20px;
         &_remember{
@@ -363,15 +363,11 @@ div.error {
         color: #000;
         letter-spacing: -0.1px;
         box-shadow: none;
-//        &_code{
-//            width: 111/246*100%;
-//            display: inline-block;
-//        }
         &_time{
             width: 140/246*100%;
             float: right;
             right: 0;
-            .clearfix;
+            &:extend(.clearfix all);
         }
     }
     &__label{
@@ -386,7 +382,6 @@ div.error {
         min-height: 100px;
         max-height: 100px;
     }
-    //-------------3page-------------//
     &__title{
         font-size: 18/16em;
         font-family: "Times New Roman";
@@ -410,7 +405,6 @@ div.error {
             padding: 30px 25px 30px 40px;
         }
     }
-    //--------------------------------//
 }
 .number-card,
 .name-owner{
@@ -457,8 +451,6 @@ div.error {
 }
 .checkbox_finish{
     left: 17.5%;
-//    padding: 0 !important;
-//    top: 24px !important;
 }
 .btn-invert{
     margin: 0 0 20px 0;
@@ -536,7 +528,6 @@ div.error {
     display: none;
 }
 .footer{
-//    &:extend(.container);
     text-align: center;
     background: #fff;
     &__i{
@@ -557,10 +548,9 @@ div.error {
         padding: 0 2.2%;
     }
 }
-//------------------------2 page--------------------//
 .create{
     margin-bottom: 40px;
-    .clearfix;
+    &:extend(.clearfix all);
     &__image{
         float: left;
         width: 300/658*100%;
@@ -585,9 +575,6 @@ div.error {
             &:last-child{
                 margin-bottom: 0;
             }
-            &__lbl{
-
-            }
         }
     }
     &__title {
@@ -603,19 +590,9 @@ div.error {
         display: none;
     }
 }
-.create-item{
-    padding-bottom: 35px;
-    position: relative;
-    margin: 0 0 29px;
-    border-bottom: 2px dotted #ccc;
-    &:last-child{
-        border: none;
-        margin: 0;
-    }
-}
 .info{
         padding-bottom: 8px;
-    .clearfix;
+    &:extend(.clearfix all);
     &__i {
         float: left;
         width: 48.5%;
@@ -662,13 +639,13 @@ div.error {
         font-family: Arial;
         font-weight: normal;
         position: relative;
-        .clearfix;
+        &:extend(.clearfix all);
     }
     &__row{
         margin: 0 0 0 45px;
         display: block;
         float: left;
-        .clearfix;
+        &:extend(.clearfix all);
         &:last-child {
             margin: 0 0 0 97px;
         }
@@ -716,7 +693,7 @@ div.error {
     width: 68%;
 }
 .row{
-    .clearfix;
+    &:extend(.clearfix all);
     margin-bottom: 20px;
     position: relative;
     &__lbl {
@@ -790,13 +767,11 @@ div.error {
     float: right;
 }
 .select {
-//    width: 59% !important;
     float: right;
     margin: -0.6rem 0 0;
     font-size: 14/16em;
     font-family: Arial;
     font-weight: normal;
-//    margin: 0;
     position: relative;
     display: inline-block;
     /* inline-block for ie7 */
@@ -900,14 +875,3 @@ div.error {
         margin-right: 10px;
     }
 }
-//@media only screen and (max-width: 481px){
-//    .checkbox_finish{
-//            padding: 0 !important;
-//            top: 24px !important;
-//    }
-//    .finish{
-//        label{
-//            padding-top: 24px;
-//        }
-//    }
-//}

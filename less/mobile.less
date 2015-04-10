@@ -38,7 +38,7 @@
         width: 100%;
         margin: 0 auto;
         padding: 36px 0 0;
-        .clearfix;
+        &:extend(&:extend(.clearfix all) all);
         &__title_mob{
             &:extend(.wrapper);
             display: block;
@@ -49,11 +49,10 @@
             color: #000;
             margin: 2px auto 25px;
         }
-        //--------------3page--------------------//
-        &_require{
-            padding-bottom: 45px;
-            &:extend(.wrapper);
-        }
+//        &-require{
+//            padding-bottom: 45px;
+//            &:extend(.wrapper);
+//        }
         &__title_require{
             margin: 0px auto 20px;
             max-width: 100%;
@@ -121,9 +120,7 @@
             float: right;
             line-height: 0.8em;
         }
-        //---------------------------------//
-        //-----------4page--------------------//
-        &_finished{
+        &-finished{
             max-width: 87%;
             text-align: center;
             padding: 98px 0 102px 0;
@@ -143,25 +140,28 @@
             color: #e24c42;
             border-bottom: 1px solid #e24c42;
         }
-        //-----------end---4page--------------------//
+        &__item{
+            .clearfix;
+            padding-bottom: 30px;
+            position: relative;
+            margin: 0 auto;
+            border-bottom: none;
+            &:extend(.wrapper);
+            &:last-child{
+                border: none;
+                margin: 40px auto 0;
+            }
+        }
+    }
+    .content-require{
+        padding-bottom: 45px;
+        &:extend(.wrapper);
     }
     .login{
         width: 100%;
         float: none;
         position: relative;
         &:extend(.wrapper);
-        &__title{
-            display: none;
-            &_mob{
-                display: block;
-                font-size: 18/16em;
-                font-weight: bold;
-                font-family: Times New Roman;
-                color: #000;
-                margin: 2px 0 40px;
-                text-transform: uppercase;
-            }
-        }
         &:after {
             content: '';
             position: absolute;
@@ -178,26 +178,12 @@
         &__input {
             padding: 7px 11px;
             letter-spacing: -0.3px;
-//            &_min{
-//                width: 58/140*100%;
-//                float: left;
-////                display: inline-block;
-////                margin: 0 23/281*100% 0 0;
-//                &:last-child{
-//                    margin: 0;
-//                    float: right;
-//                }
-//            }
             &_time{
                 width: 140/281*100%;
                 float: right;
                 right: 0;
                 .clearfix;
             }
-//            &_code{
-//                width: 140/281*100%;
-//                float: right;
-//            }
         }
         &__textarea{
             min-height: 120px;
@@ -206,7 +192,6 @@
         &__row_remember{
             margin: 20px 0 19px 0;
         }
-        //-------------3page-------------//
         &__title{
             text-align: left;
             padding: 20px 0 24px;
@@ -226,7 +211,6 @@
                 padding: 0;
             }
         }
-        //--------------------------------//
     }
     .advantage{
         float: none;
@@ -273,12 +257,11 @@
             font-family: Arial;
             font-weight: bold;
             padding: 0;
-            &_tel{
+            &-tel{
                 padding-right: 9.5%;
             }
         }
     }
-    //------------------------2 page--------------------//
     .create{
         margin-bottom: 40px;
         .clearfix;
@@ -334,18 +317,6 @@
         }
         &__lbl{
             margin-top: 6px;
-        }
-    }
-    .create-item{
-        .clearfix;
-        padding-bottom: 30px;
-        position: relative;
-        margin: 0 auto;
-        border-bottom: none;
-        &:extend(.wrapper);
-        &:last-child{
-            border: none;
-            margin: 40px auto 0;
         }
     }
 
@@ -560,7 +531,6 @@
         }
     }
 }
-//--------------------end--2--page-----//
 @media only screen and (max-width: 690px){
     .select-wr{
         width: 78% !important;
@@ -585,7 +555,7 @@
     }
 }
 @media only screen and (max-width: 370px){
-    .create-item:last-child{
+    .content__item:last-child{
         margin: 15px auto 0;
     }
     .select-wr{
