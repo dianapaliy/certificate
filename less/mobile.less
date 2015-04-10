@@ -305,7 +305,7 @@
             float: left;
             margin-right: 0;
             .row{
-                margin: 28px 0 24px 0;
+                margin: 25px 0 24px 0;
                 &:last-child{
                     margin: 0;
                 }
@@ -331,6 +331,9 @@
             width: 67%;
             float: right;
             margin-right: 0;
+        }
+        &__lbl{
+            margin-top: 6px;
         }
     }
     .create-item{
@@ -568,6 +571,17 @@
     .select-wr{
         width: 70% !important;
         display: inline-block;
+    }
+}
+@media only screen and (max-width: 481px){
+    .checkbox_finish{
+        padding: 0 !important;
+        top: 24px !important;
+    }
+    .finish{
+        label{
+            padding-top: 24px;
+        }
     }
 }
 @media only screen and (max-width: 370px){

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kiehl's certificate</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 <body>
@@ -41,7 +42,11 @@
                     <p class="content__order content__order_last">Сумма к оплате: <span>1000,00 Р</span></p>
                     <div class="content__session">
                         <span class="content__session-text">До завершения сеанса осталось</span>
-                        <span class="content__session-time">15:00</span>
+                        <!--<div class="countdown">-->
+                            <span class="content__session-time" id="noDaysSeconds"></span>
+                        <!--</div>-->
+                        <!--<div id="ms_timer2"><span class="content__session-time" id="ms_timer"></span></div>-->
+                        <!--<span class="content__session-time">15:00</span>-->
                     </div>
                     <p class="content__info">Пожалуйста, введите реквизиты платежного средства и нажмите кнопку “Оплатить”.</p>
                     <p class="content__info">По завершению оплаты вы будете автоматически перенаправлены на страницу интернет-магазина. </p>
@@ -123,6 +128,11 @@
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.plugin.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<!-- bower:js -->
+<script src="bower_components/devicejs/lib/device.js"></script>
+<!-- endbower -->
 <script type="text/javascript" src="js/validation.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/require.js"></script>

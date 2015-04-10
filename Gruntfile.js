@@ -38,6 +38,15 @@ module.exports = function(grunt) {
                     baseDir: '.'
                 }
             }
+        },
+        wiredep: {
+
+            dev: {
+
+                // Point to the files that should be updated when
+                // you run `grunt wiredep`
+                src: '*.html'
+            }
         }
     });
     require('load-grunt-tasks')(grunt);

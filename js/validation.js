@@ -149,6 +149,7 @@ jQuery(document).ready(function ($) {
             moreCharStr50 = "Введи больше символов",
             equalTo = "Не соответствует",
             maxValue = "Max = 12",
+            maxValueYear = "Max = 20",
             minSigns = "min 2 signs",
             minSigns3 = "min 3 signs",
             messageStr = "error";
@@ -293,7 +294,8 @@ jQuery(document).ready(function ($) {
                 },
                 'yy': {
                     required: requiredFieldStr,
-                    minlength: minSigns
+                    minlength: minSigns,
+                    max: maxValueYear
                 }
             },
             rules: {
@@ -429,13 +431,18 @@ jQuery(document).ready(function ($) {
                 },
                 'yy': {
                     required: true,
-                    minlength: "2"
+                    minlength: "2",
+                    max: "20"
                 }
             },
             invalidHandler: function (ev, validator) {
                 var errors = validator.numberOfInvalids();
                 if (errors) {
                     validator.errorList[0].element.focus(); //Set Focus
+                    if ($('body').hasClass('mobile') || $('body').hasClass('tablet')) {
+                        var docTop = $(validator.errorList[0].element).offset().top - 100;
+                        $(document).scrollTop(docTop); // Scroll to first error
+                    }
                 }
                 setTimeout(function () {
                     manageErrorLabels($form);
@@ -456,6 +463,8 @@ jQuery(document).ready(function ($) {
             }
 
         });
+
+
 
 
         manageSubmitButton({data: {$form: $form}});

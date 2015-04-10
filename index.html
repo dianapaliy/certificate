@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kiehl's certificate</title>
+    <!-- bower:css -->
+    <!-- endbower -->
     <link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 <body>
@@ -31,13 +33,13 @@
             <div class="content">
                 <div class="login">
                     <span class="login__title">Войти</span>
-                    <span class="login__title_mob">Оплата</span>
+                    <span class="login__title_mob">Войти</span>
                     <ul class="login__social">
-                        <li class="login__item"><a class="login__link login__link_fb" href="#"><!-- --></a></li><!--
-                    --><li class="login__item"><a class="login__link login__link_twitter" href="#"><!-- --></a></li><!--
-                    --><li class="login__item"><a class="login__link login__link_vk" href="#"><!-- --></a></li><!--
-                    --><li class="login__item"><a class="login__link login__link_insta" href="#"><!-- --></a></li><!--
-                    --><li class="login__item"><a class="login__link login__link_google" href="#"><!-- --></a></li>
+                        <li class="login__item"><a class="login__link login__link_fb" href="https://graph.facebook.com/oauth/authorize?client_id=1582108608739598&scope=email%2Coffline_access&redirect_uri=http%3A%2F%2Fkiehls.oggettoweb.com%2Fsocial%2Flink%2Fadd%2F%3Fprovider%3Dfb&display=popup"><!-- --></a></li><!--
+                    --><li class="login__item"><a class="login__link login__link_twitter" href="http://kiehls.oggettoweb.com/social/twitter/authorize/type/link/"><!-- --></a></li><!--
+                    --><li class="login__item"><a class="login__link login__link_vk" href="https://oauth.vk.com/authorize?client_id=4846210&scope=offline%2Cemail&redirect_uri=http%3A%2F%2Fkiehls.oggettoweb.com%2Fsocial%2Flink%2Fadd%2F%3Fprovider%3Dvk&response_type=code"><!-- --></a></li><!--
+                    --><li class="login__item"><a class="login__link login__link_insta" href="https://api.instagram.com/oauth/authorize?client_id=6424d54e21314f4c82d64957f872fd90&scope=basic&redirect_uri=http%3A%2F%2Fkiehls.oggettoweb.com%2Fsocial%2Finstagram%2Flogin%2F%3Ftype%3Dlink&response_type=code"><!-- --></a></li><!--
+                    --><li class="login__item"><a class="login__link login__link_google" href="http://kiehls.oggettoweb.com/social/google/authorize/type/link/"><!-- --></a></li>
                     </ul>
                     <span class="login__divider"><span>или</span></span>
                     <form class="form login-form" id="loginForm" >
@@ -100,12 +102,14 @@
         </div>
     </footer>
 </div>
-
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/validation.js"></script>
+<!-- bower:js -->
+<script src="bower_components/devicejs/lib/device.js"></script>
+<!-- endbower -->
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
 </body>

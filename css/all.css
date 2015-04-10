@@ -10,6 +10,9 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 html {
   font-family: sans-serif;
   /* 1 */
@@ -710,6 +713,9 @@ div.error {
 .login__item:first-child {
   margin: 0;
 }
+.login__item:last-child {
+  margin-right: 0;
+}
 .login__link {
   display: inline-block;
   width: 30px;
@@ -757,7 +763,7 @@ div.error {
   top: 50%;
   left: 0;
   line-height: 18px;
-  border-top: 2px dotted #525252;
+  border-top: 1px dotted #525252;
   z-index: 1;
 }
 .login-form {
@@ -793,7 +799,7 @@ div.error {
   font-size: 0.875em;
   font-weight: normal;
   font-family: Arial;
-  color: #a6a6a6;
+  color: #000;
   letter-spacing: -0.1px;
   box-shadow: none;
 }
@@ -1062,11 +1068,12 @@ div.error {
 }
 .info__i {
   float: left;
-  width: 45.50898204%;
+  width: 48.5%;
   position: relative;
 }
 .info__i:last-child {
-  margin: 0 0 0 7%;
+  width: 45.50898204%;
+  margin: 0 0 0 4%;
   padding: 0 0 0 0;
 }
 .info__i:last-child .info__lbl {
@@ -1251,6 +1258,7 @@ div.error {
 .select-wr {
   width: 63% !important;
   display: inline-block;
+  float: right;
 }
 .select {
   float: right;
@@ -1354,15 +1362,6 @@ div.error {
   }
   .row_code span {
     margin-right: 10px;
-  }
-}
-@media only screen and (max-width: 481px) {
-  .checkbox_finish {
-    padding: 0 !important;
-    top: 24px !important;
-  }
-  .finish label {
-    padding-top: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1684,7 +1683,7 @@ div.error {
     margin-right: 0;
   }
   .create__content .row {
-    margin: 28px 0 24px 0;
+    margin: 25px 0 24px 0;
   }
   .create__content .row:last-child {
     margin: 0;
@@ -1709,6 +1708,9 @@ div.error {
     width: 67%;
     float: right;
     margin-right: 0;
+  }
+  .create__lbl {
+    margin-top: 6px;
   }
   .create-item {
     *zoom: 1;
@@ -1982,6 +1984,15 @@ div.error {
   .select-wr {
     width: 70% !important;
     display: inline-block;
+  }
+}
+@media only screen and (max-width: 481px) {
+  .checkbox_finish {
+    padding: 0 !important;
+    top: 24px !important;
+  }
+  .finish label {
+    padding-top: 24px;
   }
 }
 @media only screen and (max-width: 370px) {

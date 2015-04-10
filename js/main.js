@@ -6,6 +6,7 @@ jQuery(function ($) {
     require = {
         init: function() {
             this.clearForm();
+            this.countdown();
         },
         clearForm: function() {
             var
@@ -16,6 +17,21 @@ jQuery(function ($) {
 
                 $('#require')[0].reset();
             });
+        },
+        countdown: function() {
+
+            $('#noDaysSeconds').countdown({
+                until: '+15m +00s',
+                onExpiry: liftOff,
+                format: 'MS',
+                padZeroes: true,
+                compact: true,
+                timeSeparator: ':',
+                description: ''
+            });
+            function liftOff() {
+                location.href = "http://192.168.0.39:3000/payment.html";
+            }
         }
     };
 
