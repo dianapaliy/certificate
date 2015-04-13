@@ -1681,6 +1681,7 @@ div.error {
     position: relative;
   }
   .info__i:last-child {
+    width: 100%;
     margin: 0;
     padding: 13px 0 0 0;
   }
