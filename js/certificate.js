@@ -119,7 +119,6 @@ jQuery(function ($) {
         },
         initSwipeMonths: function() {
             $(document).hammer().on( "swipeleft swiperight", '.ui-datepicker-calendar', function(e){
-                console.log('typ', e.type)
                 if (e.type === 'swipeleft') {
                     swipeleftHandler();
                 }
