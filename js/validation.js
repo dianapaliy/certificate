@@ -439,10 +439,10 @@ jQuery(document).ready(function ($) {
                 var errors = validator.numberOfInvalids();
                 if (errors) {
                     validator.errorList[0].element.focus(); //Set Focus
-                    if ($('body').hasClass('mobile') || $('body').hasClass('tablet')) {
+                    //if ($('body').hasClass('mobile') || $('body').hasClass('tablet')) {
                         var docTop = $(validator.errorList[0].element).offset().top - 100;
                         $(document).scrollTop(docTop); // Scroll to first error
-                    }
+                    //}
                 }
                 setTimeout(function () {
                     manageErrorLabels($form);

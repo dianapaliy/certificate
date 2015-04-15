@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "devicejs": "~0.2.4"
+    "devicejs": "~0.2.4",
+    "jquery": "~2.1.3"
   }
 }
