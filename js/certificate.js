@@ -10,6 +10,7 @@ jQuery(function ($) {
             this.initializeUpdater();
             this.showCalendar();
             this.validation();
+            this.initSwipeMonths();
         },
         showCalendar: function() {
             var $chooseTimeControls = $('.js-certificate-choose-time'),
@@ -66,6 +67,7 @@ jQuery(function ($) {
             $.timepicker.setDefaults($.timepicker.regional['ru']);
         },
         initializeCalendar: function(current) {
+            var self = this;
             var $calendar = $('#datetimepicker'),
                 date = new Date();
 
@@ -113,6 +115,27 @@ jQuery(function ($) {
             var $form = $('#certificate');
             window.initializeFormValidation('certificate');
             $('#certificateRecipientTelephone').mask("+7 (999) 999-99-99");
+        },
+        initSwipeMonths: function() {
+            bind();
+            function swipeleftHandler(){
+                unbind();
+                $('.ui-datepicker-next').click();
+                bind();
+                return true;
+            }
+            function swiperightHandler(){
+                unbind();
+                $('.ui-datepicker-prev').click();
+                bind();
+                return true;
+            }
+            function bind() {
+                $('.ui-datepicker-calendar').on( "swipeleft", swipeleftHandler ).on( "swiperight", swiperightHandler );
+            }
+            function unbind() {
+                $('.ui-datepicker-calendar').off( "swipeleft", swipeleftHandler ).off( "swiperight", swiperightHandler );
+            }
         }
     };
 
